@@ -13,6 +13,14 @@ search bar
 user account-login info (username,password,confirm password,email,agree to terms and conditions)
 class parent buyer, child seller
 seller listings based on carousell.
+<<<<<<< HEAD
+=======
+GAME 1 (ACCURACY): - Yeow Teik
+A TIMER 
+USER START THE STOPWATCH AND WATCH STARTS
+USER STOP AT EXACTLY 1 MIN FOR A PRIZE
+
+>>>>>>> 2c9ed73683f0474164857503b3e3111716f3892e
 
 
 
