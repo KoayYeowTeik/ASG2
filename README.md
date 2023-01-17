@@ -18,7 +18,9 @@ GAME 1 (ACCURACY): - Yeow Teik
 A TIMER 
 USER START THE STOPWATCH AND WATCH STARTS
 USER STOP AT EXACTLY 1 MIN FOR A PRIZE
-GAME 2 IDEA
+GAME 2 IDEA - Kenan
+Fruit Ninja(Lego Brick Version)
+Cut as many Bricks as possible to earn prizes
 
 
 
