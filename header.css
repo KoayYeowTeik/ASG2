@@ -1,0 +1,23 @@
+.headernotice {
+    background-color:rgb(189, 189, 189);
+    text-align:center;
+
+}
+.headernav{
+    background-color:blue
+}
+.headernav > img {
+    margin-top: 2%;
+    margin-bottom:2%;
+    margin-left: 10%;
+    margin-right:5%;
+    height:30%;
+    width:30%;
+}
+.headernotice2{
+    background-color:rgb(189, 189, 189);
+    text-align:center;
+}
+.checked {
+    color:gold;
+}
