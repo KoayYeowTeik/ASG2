@@ -9,10 +9,10 @@
 .headernav > img {
     margin-top: 2%;
     margin-bottom:2%;
-    margin-left: 10%;
+    margin-left: 9%;
     margin-right:5%;
-    height:30%;
-    width:30%;
+    height:25%;
+    width:25%;
 }
 .headernotice2{
     background-color:rgb(189, 189, 189);
@@ -20,4 +20,15 @@
 }
 .checked {
     color:gold;
+}
+
+.footer1{
+    background-color:whitesmoke;
+}
+.footer2 {
+    background-color:whitesmoke;
+}
+.footer2 >img {
+    height:5%;
+    width:5%;
 }
