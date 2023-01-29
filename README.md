@@ -21,10 +21,6 @@ USER STOP AT EXACTLY 1 MIN FOR A PRIZE
 GAME 2 IDEA - Kenan
 Fruit Ninja(Lego Brick Version)
 Cut as many Bricks as possible to earn prizes
-GAME 3 IDEA - Kenan
-Spin Wheel(Idea is still fresh might not do since everyone else is doing do not commit first)
-Game 4 IDEA - Kenan
-Coin Collector: Player would walk around the field to collect coins(Can try dont commit first, its a fresh idea)
 
 
 
