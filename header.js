@@ -3,8 +3,6 @@ var header = document.querySelector(".header");
 var notice = "notice";
 var notice2 = "notice2"
 var headernotice2 = header.appendChild(document.createElement("div"));
-headernotice2.className = "headernotice";
-headernotice2.appendChild(document.createTextNode(notice));
 
 //header nav
 header.appendChild(document.createElement("div")).className = "headernav";
@@ -18,18 +16,33 @@ headernavbutton.className =  "headernavbutton";
 headernavbutton.appendChild(document.createTextNode("Sign up / Login"));
 headernavbutton.addEventListener("click",gologinpage);
 headernavbutton.className = "Login";
+headernavbutton.style.color = 'Orange';
+headernavbutton.style.backgroundColor = '#F3E496';
+headernavbutton.style.borderStyle = 'hidden' ;
+
 var headernavbutton = headernav.appendChild(document.createElement("button"));
 headernavbutton.appendChild(document.createTextNode("Likes"));
 headernavbutton.addEventListener("click",golikepage);
 headernavbutton.className = "Likes";
+headernavbutton.style.color = 'orange';
+headernavbutton.style.backgroundColor = '#F3E496';
+headernavbutton.style.borderStyle = 'hidden';
+
 var headernavbutton = headernav.appendChild(document.createElement("button"));
 headernavbutton.appendChild(document.createTextNode("Account"));
 headernavbutton.addEventListener("click",goaccountpage);
 headernavbutton.className = "account";
+headernavbutton.style.color = 'orange';
+headernavbutton.style.backgroundColor = '#F3E496';
+headernavbutton.style.borderStyle = 'hidden';
+
 var headernavbutton = headernav.appendChild(document.createElement("button"));
 headernavbutton.appendChild(document.createTextNode("Cart"));
 headernavbutton.addEventListener("click",gocartpage);
 headernavbutton.className = "cart";
+headernavbutton.style.color = 'White';
+
+
 
 var headernotice2 = header.appendChild(document.createElement("div"));
 headernotice2.className = "headernotice2";
