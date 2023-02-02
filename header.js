@@ -12,7 +12,9 @@ var headernav = document.querySelector(".headernav");
 var headernavimg = headernav.appendChild(document.createElement("img"));
 headernavimg.src = "Images/FACZ-BRICKS-ICON.png";
 headernavimg.addEventListener("click",gohomepage);
-//if login == false:
+headernavimg.style.width = "160px"
+headernavimg.style.height = "60px"
+/*//if login == false:
 var headernavbutton = headernav.appendChild(document.createElement("button"))
 headernavbutton.className =  "headernavbutton";
 headernavbutton.appendChild(document.createTextNode("Sign up / Login"));
@@ -36,7 +38,7 @@ headernotice2.className = "headernotice2";
 headernotice2.appendChild(document.createTextNode(notice2));
 
 
-
+*/
 var footer = document.querySelector(".footer");
 var footer1 = footer.appendChild(document.createElement("div"));
 footer1.className = "footer1";
