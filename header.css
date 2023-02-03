@@ -83,6 +83,10 @@ header::after {
     position: relative;
 
 }
+.logoimg{
+    width:250;
+    height:80px;
+}
 
 .navbar-links li a{
     text-decoration: none;

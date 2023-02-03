@@ -1,19 +1,32 @@
+    $("body").prepend($("<header class = 'header'></header>"));
+$("header").append($("<div class = 'container'></div>"));
+
+$("div.container").append($("<nav class = 'navbar'></nav>"))
+$("nav.navbar").append($("<a href = '#'     class = 'toggle-button'></a>"));
+for (let i = 0;i<3;i++){
+    $("a.toggle-button").append($("<span class = 'bar'></span>"));
+}
+$("nav.navbar").append($("<div class = 'navbar-links'></div>"));
+$("div.navbar-links").append($("<ul></ul>"));
+$("ul:first").append($("<img src = 'Images/FACZ-BRICKS-ICON.png' class = 'logoimg'>"));
+$("ul:first").append($("<li><a href = 'Login.html' class = 'login'>Login/Sign up</a></li>"));
+if (localStorage.getItem("isLoggedIn") == "true"){
+    $("a.login").hide();
+}
+else{$("a.login").show()}
+$("ul:first").append($("<li><a href='like.html'>Likes</a></li>"));
+$("ul:first").append($("<li><a href='account.html'>Account</a></li>"));
+$("ul:first").append($("<li><a href='cart.html'>Cart</a></li>"))
+$("img.logoimg").click(function (e) { 
+    e.preventDefault();
+    window.location.href = "homepage.html";
+});
 var header = document.querySelector(".header");
 //creating notice
-var notice = "notice";
-var notice2 = "notice2"
-var headernotice2 = header.appendChild(document.createElement("div"));
-headernotice2.className = "headernotice";
-headernotice2.appendChild(document.createTextNode(notice));
 
-//header nav
-header.appendChild(document.createElement("div")).className = "headernav";
-var headernav = document.querySelector(".headernav");
-var headernavimg = headernav.appendChild(document.createElement("img"));
-headernavimg.src = "Images/FACZ-BRICKS-ICON.png";
-headernavimg.addEventListener("click",gohomepage);
-headernavimg.style.width = "160px"
-headernavimg.style.height = "60px"
+
+
+
 /*//if login == false:
 var headernavbutton = headernav.appendChild(document.createElement("button"))
 headernavbutton.className =  "headernavbutton";
@@ -89,22 +102,4 @@ p.appendChild(document.createTextNode("This website is not legitamate, it is for
 
 
 
-function gohomepage(event){
-    window.location.href = "homepage.html";
-}
-function gologinpage(event){
-    window.location.href = "login.html";
-    event.preventDefault();
-}
-function golikepage(event){
-    window.location.href = "like.html";
-    event.preventDefault();
-}
-function goaccountpage(event){
-    window.location.href = "account.html";
-    event.preventDefault();
-}
-function gocartpage(event){
-    window.location.href = "cart.html";
-    event.preventDefault();
-}
+
