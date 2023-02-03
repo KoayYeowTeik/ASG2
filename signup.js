@@ -39,7 +39,6 @@ $("button.next").click(function (e) {
                     }
                   }   
                   $.ajax(settings).done(function (response) {
-                    console.log(response);
                     for(let i = 0;i<response.length;i++){
                         if (response[i].email == $("input#email").val() || response[i].password == $("input#password").val() || response[i].username == $("input#username").val()){
                             $("p.warningaccount").show();
@@ -73,7 +72,6 @@ $("button.next").click(function (e) {
                                 }
         
                             $.ajax(settings).done(function (response) {
-                            console.log(response);
                             window.location.href = "Login.html"
                             });
                             }

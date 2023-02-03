@@ -17,7 +17,9 @@ function checkpassword(e){
 $("button.login").click(function (e) { 
     e.preventDefault();
     if (($("input#email").val()).match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+        $("p.warningtext").hide();
         if ($("input#password").val().length >= 7 && ($("input#password").val()).length <= 16){
+            $("p.warningpassword").hide();
             var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -32,14 +34,25 @@ $("button.login").click(function (e) {
               
               $.ajax(settings).done(function (response) {
                 console.log(response);
-                for(let i = 0;i<response.length;i++){
+                for (let i = 0;i<response.length;i++){
                     if (response[i].email == $("input#email").val() && response[i].password == $("input#password").val()){
-                        console.log("yes");
+                        localStorage.setItem("email",response[i].email);
+                        localStorage.setItem("password",response[i].password);
+                        localStorage.setItem("username",response[i].username);
+                        localStorage.setItem("isLoggedIn",true);
+                        localStorage.setItem("Likes",JSON.stringify(response[i].Likes_listing));
+                        localStorage.setItem("Buy_listing",JSON.stringify(response[i].Buy_listing));
+                        localStorage.setItem("Discount_Listing",JSON.stringify(response[i].Discount_Listing));
+                        window.location.href = "homepage.html";
+                        break;
                     }
                 }
+
               });
         }
+        else {$($("p.warningpassword")).show();}
     }
-    else {$("p.warningtext").show();}
-    
+    else {$("p.warningtext").show()}
 });
+/*if (($("input#email").val()).match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
+    if ($("input#password").val().length >= 7 && ($("input#password").val()).length <= 16){*/

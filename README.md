@@ -22,5 +22,35 @@ GAME 2 IDEA - Kenan
 Fruit Ninja(Lego Brick Version)
 Cut as many Bricks as possible to earn prizes
 
+Update 1.0
+Creation of JS code for header and footer where one Javascript code is able to display all that data at every page, usage of pure Javascript
+
+
+
+Update 2.0 (SIGN UP page)
+Sign up page: Create the html for the sign up page with simple input text
+Patch 2.1
+Creating validation for input email, password , username and DOB where the page will not proceed unless the data inputted is correct format as the required inputted data
+Patch 2.2 
+Created the ability for POSTING for data to the RestDB database, uploading the relevant data and some JSON data for further usage
+Patch 2.3
+Validated the inputted data into the RestDB database where no account can have the same information for Login purposes
+Patch 2.4
+Completion of the Signup.html and js scripts where if the sign up is successful, the user will proceed to the login page for confirmation, waiting for partner to do the CSS
+Patch 2.5
+Kenan, enter what u did for the CSS here
+
+Update 3.0 (Login page)
+Login page: Created the html for the login page with simple input text and some href links for future use
+Patch 3.1
+Created the JS file for inputting email and password with some simple validation for inputted code with onkeypress/down
+Patch 3.2
+Usage of the RestDB from Patch 2.0-2.4 to GET the userdata and compare with the login details and see if the login details are valid,
+if login details match any of the objects, the user's local storage data will be updated to its specifications and the user will be directed to the homepage with login details (further information can be seen in the Patch 1 details)
+
+
+
+
+
 
 
