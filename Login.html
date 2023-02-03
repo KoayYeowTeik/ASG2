@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="header.css"></head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
     <div class="header"></div>
     <div class="login">
         <div class="FACZlogin">
@@ -16,11 +17,13 @@
         </div>
         <div class="credentials">
             <p>Log in to FaczBricks</p>
-            <p>Username or Email</p>
-            <input type="text" name="username" id="username">
+            <p>Email</p>
+            <input type="text" name="email" id="email" required onkeypress = "checkemail()">
+            <p class="warningtext warning">Invalid Email</p>
             <a href="#">Problem logging in?</a>
             <p>Password</p>
-            <input type="text" name="password" id="username">
+            <input type="text" name="password" id="password" required onkeydown = "checkpassword()">
+            <p class="warningpassword warning">Password must be within 8-16 characters</p>
             <a href="#">Forgot password?</a>
             <button class = "login">Log In</button>
         </div>
@@ -33,6 +36,5 @@
     <div class="footer"></div>
     <script src="header.js" defer></script>
     <script src="login.js" defer></script>
-    <script src="login.js"></script>
 </body>
 </html>

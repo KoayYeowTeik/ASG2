@@ -2,6 +2,7 @@ $(document).ready(function () {
     $("div.signup").show();
     $("p.warningtext").hide();
     $("p.warningpassword").hide();
+    $("p.warningaccount").hide();
     $("p.warningdate").hide();
     $("div.TOC").hide();
 });
@@ -20,40 +21,68 @@ function checkpassword(e){
 $("button.next").click(function (e) { 
     e.preventDefault();
     if (($("input#email").val()).match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
-        if (($("input#password").val()).length >= 8 && ($("input#password").val()).length <= 16){
+        if (($("input#password").val()).length >= 7 && ($("input#password").val()).length <= 16){
             var DOB = new Date($("input#DOB").val());
             var today = new Date();
             if (Math.floor((today-DOB)/1000/60/60/24/365) >= 18){
-                $("div.signup").hide();
-                $("div.TOC").show();
-                $("p.warningcheckbox").hide();
-                $("button.createacc").click(function (e) { 
-                    e.preventDefault();
-                    if ($("input#TOC").is(":checked")){
-                        $("p.warningcheckbox").hide();
-                        var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val()};
-                        var settings = {
-                        "async": true,
-                        "crossDomain": true,
-                        "url": "https://faczbricksdata-e1b3.restdb.io/rest/userdata",
-                        "method": "POST",
-                        "headers": {
-                            "content-type": "application/json",
-                            "x-apikey": "63dbc5043bc6b255ed0c458e",
-                            "cache-control": "no-cache"
-                        },
-                        "processData": false,
-                        "data": JSON.stringify(jsondata)
-                        }
-
-                    $.ajax(settings).done(function (response) {
-                    console.log(response);
-                    });
+                var alraccount = false;
+                $("p.warningdate").hide();
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "https://faczbricksdata-e1b3.restdb.io/rest/userdata",
+                    "method": "GET",
+                    "headers": {
+                      "content-type": "application/json",
+                      "x-apikey": "63dbc5043bc6b255ed0c458e",
+                      "cache-control": "no-cache"
                     }
-                    else{$("p.warningcheckbox").show();}
-                    
-                    
-                });
+                  }   
+                  $.ajax(settings).done(function (response) {
+                    console.log(response);
+                    for(let i = 0;i<response.length;i++){
+                        if (response[i].email == $("input#email").val() || response[i].password == $("input#password").val() || response[i].username == $("input#username").val()){
+                            $("p.warningaccount").show();
+                            alraccount = true;
+                            break;
+                        }
+                    }
+                    if (alraccount != true){
+                        $("div.signup").hide();
+                        $("div.TOC").show();
+                        $("p.warningcheckbox").hide();
+                        $("button.createacc").click(function (e) { 
+                            $("button.createacc").hide();
+                            e.preventDefault();
+                            if ($("input#TOC").is(":checked")){
+                                $("p.warningcheckbox").hide();
+        
+                                var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val(),"Likes_listing":{},"Buy_listing":{},"Discount_Listing":{}};
+                                var settings = {
+                                "async": true,
+                                "crossDomain": true,
+                                "url": "https://faczbricksdata-e1b3.restdb.io/rest/userdata",
+                                "method": "POST",
+                                "headers": {
+                                    "content-type": "application/json",
+                                    "x-apikey": "63dbc5043bc6b255ed0c458e",
+                                    "cache-control": "no-cache"
+                                },
+                                "processData": false,
+                                "data": JSON.stringify(jsondata)
+                                }
+        
+                            $.ajax(settings).done(function (response) {
+                            console.log(response);
+                            window.location.href = "Login.html"
+                            });
+                            }
+                            else{$("p.warningcheckbox").show();}
+                            
+                            
+                        });
+                    }
+                  });            
             }
             else {$("p.warningdate").show();}
         }
@@ -61,8 +90,6 @@ $("button.next").click(function (e) {
     }
     else{$("p.warningtext").show();}
 });
-
-
 
 
 
