@@ -1,4 +1,4 @@
-    $("body").prepend($("<header class = 'header'></header>"));
+$("body").prepend($("<header class = 'header'></header>"));
 $("header").append($("<div class = 'container'></div>"));
 
 $("div.container").append($("<nav class = 'navbar'></nav>"))
@@ -16,13 +16,13 @@ if (localStorage.getItem("isLoggedIn") == "true"){
 else{$("a.login").show()}
 $("ul:first").append($("<li><a href='like.html'>Likes</a></li>"));
 $("ul:first").append($("<li><a href='account.html'>Account</a></li>"));
-$("ul:first").append($("<li><a href='cart.html'>Cart</a></li>"))
+$("ul:first").append($("<li><a href='cart.html'>Cart</a></li>"));
+$("ul:first").append($("<li><a href = 'community.html'>Community</a></li>"));
 $("img.logoimg").click(function (e) { 
     e.preventDefault();
     window.location.href = "homepage.html";
 });
-var header = document.querySelector(".header");
-//creating notice
+$("header").after($("<img src = 'Images/HeaderImage.png' class = 'headerbackground'>"))
 
 
 
