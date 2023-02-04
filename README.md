@@ -24,6 +24,8 @@ Cut as many Bricks as possible to earn prizes
 
 Update 1.0
 Creation of JS code for header and footer where one Javascript code is able to display all that data at every page, usage of pure Javascript
+Update 1.1
+Idea of creating a search bar
 
 
 
@@ -47,6 +49,18 @@ Created the JS file for inputting email and password with some simple validation
 Patch 3.2
 Usage of the RestDB from Patch 2.0-2.4 to GET the userdata and compare with the login details and see if the login details are valid,
 if login details match any of the objects, the user's local storage data will be updated to its specifications and the user will be directed to the homepage with login details (further information can be seen in the Patch 1 details)
+ 
+Update 4.0(Review page)
+Review page: Created simple html for displaying of review data for each object in the JSON (max of only 10 can be seen)
+Patch 4.1
+Added css for the review fa-fa star for easy visualisation of the review star
+Patch 4.2
+Added js code to retrieve the data from another server called user data from another DB as RestDB only allow one API key for one account(free version)
+Wrote js code to display each review information and the ability to leave a review yourself
+Patch 4.3
+Added POST to the DB code to upload to the DB (validation only includes not posting blank info)
+Patch 4.4(CSS waiting for parnter)
+
 
 
 
