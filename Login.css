@@ -10,6 +10,7 @@
     background-size: cover;
     position: absolute;
     background-attachment: fixed;
+    overflow: hidden;
 }
 .FACZlogin{
     margin: 6% auto;
