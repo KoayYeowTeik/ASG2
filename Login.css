@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container2{
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpapers.com/images/hd/hd-lego-bricks-background-qsznux1skhp0v1m7.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+}
+.FACZlogin{
+    margin: 6% auto;
+    position:relative;
+    left: 430px;
+    color: antiquewhite;
+}
+.topbar{
+    width:360px;
+    height:480px;
+    position:relative;
+    margin: 6% auto;
+    background: #fff;
+    padding: 5px;
+}
+.buttonbox{
+    width: 220px;
+    margin: 35px auto;
+    position:relative;
+    box-shadow: 0 0 20px 9px peachpuff;
+    border-radius: 30px;
+
+}
+.btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#colorbtn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, red, orange);
+    border-radius: 30px;
+    transition: .5s;
+}
+.input{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+.inputfield{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid lightgray;
+    outline: none;
+    background: transparent;
+}
+.submitbtn{
+    width:85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-left: 20%;
+    margin-top: 20%;
+    background: linear-gradient(to right, red, orange);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.maily{
+    margin-left: 10px;
+}
+.btn2{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    margin-left: 40px;
+}

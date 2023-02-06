@@ -8,30 +8,43 @@
     <link rel = "icon" type = "image/png" href = "Images/Tab Icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="header.css"></head>
+    <link rel="stylesheet" href="Login.css">
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-    <div class="login">
-        <div class="FACZlogin">
-            FACZ BRICKS LOGIN
+    <div class ="container2">
+        <div class="login">
+            <div class="FACZlogin">
+                FACZ BRICKS LOGIN
+            </div>
+            <div class="topbar">
+                <div class="buttonbox">
+                    <div id="colorbtn"></div>
+                    <button class ="btn">
+                        <div class = "login">Log In</div>
+                    </button>
+                    <button class="btn">
+                        <!--<p>New to FaczBricks? Register as a Member!</p>
+                        <p>By becoming a member, you can claim discount, buy and store items you have placed with a wanted list!</p>-->
+                        <a href="signup.html">Register</a>
+                    </button>
+                </div>
+                <div class="input">
+                    <p class="maily">Email</p>
+                    <input type="text" name="email" id="email" class="inputfield" required onkeypress = "checkemail()">
+                    <p class="warningtext warning">Invalid Email</p>
+                    <p class="maily">Password</p>
+                    <input type="password" name="password" id="password" class="inputfield" required onkeydown = "checkpassword()">
+                    <p class="warningpassword warning">Password must be within 8-16 characters</p>
+                    <a href="forgetpassword.html">Forgot password?</a>
+                    <div class="submitbtn">
+                        <button class = "login btn2">Log In</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="credentials">
-            <p>Log in to FaczBricks</p>
-            <p>Email</p>
-            <input type="text" name="email" id="email" required onkeypress = "checkemail()">
-            <p class="warningtext warning">Invalid Email</p>
-            <p>Password</p>
-            <input type="password" name="password" id="password" required onkeydown = "checkpassword()">
-            <p class="warningpassword warning">Password must be within 8-16 characters</p>
-            <a href="forgetpassword.html">Forgot password?</a>
-            <button class = "login">Log In</button>
-        </div>
-        <div class="new">
-            <p>New to FaczBricks? Register as a Member!</p>
-            <p>By becoming a member, you can claim discount, buy and store items you have placed with a wanted list!</p>
-            <a href="signup.html">Register</a>
-        </div>
+        <div class="footer"></div>
     </div>
-    <div class="footer"></div>
+
     <script src="header.js" defer></script>
     <script src="login.js" defer></script>
 </body>
