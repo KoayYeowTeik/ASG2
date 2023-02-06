@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: #777;
+    font-family: sans-serif;
+    font-weight: 300;
+}
+.container2{
+    height: 100%;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpapers.com/images/hd/hd-lego-bricks-background-qsznux1skhp0v1m7.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+#login-box{
+    position: relative;
+    margin: 5% auto;
+    height: 500px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+.leftbox{
+    position: absolute;
+    top: 0;
+    left:0;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 300px;
+    height: 400px;
+}
+h1{
+    margin: 0 0 20px 0;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+}
+.next{
+    margin-bottom: 28px;
+    width: 120px;
+    height: 30px;
+    background:#f44336;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+    
+}
+.next:hover,
+.next:focus{
+    background: lightsalmon;
+    transition: 0.2s ease;
+}
+.right-box{
+    position: absolute;
+    top:0;
+    right:0;
+    box-sizing: border-box;
+    padding: 40px;
+    width:300px;
+    height:500px;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/90/776/888/animation-the-lego-batman-movie-2017-4k-wallpaper-preview.jpg");
+    background-size: cover;
+    
+}
+.or{
+    position: absolute;
+    bottom: 480px;
+    left:280px;
+    width:40px;
+    height:40px;
+    background: #efefef;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    line-height: 40px;
+    text-align: center;
+
+}
+.right-box .signinwith{
+    display: block;
+    margin-bottom: 40px;
+    font-size: 28px;
+    color:white;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+button.social{
+    margin-bottom: 30px;
+    width:220px;
+    height: 50px;
+    border:none;
+    border-radius: 2px;
+    color:#fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.facebook{
+    background: #32508e;
+}
+.twitter{
+    background: #55acee;
+}
+.insta{
+    background: linear-gradient(to right, red, orange);
+}
