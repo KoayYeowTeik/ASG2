@@ -8,34 +8,49 @@
     <link rel = "icon" type = "image/png" href = "Images/Tab Icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="signup.css">
 </head>
 <body>
     <script src="header.js" defer></script>
-    <div class="header"></div>
-    <p>Create an account</p>
-    <div class="signup">
-        <p>Account Info</p>
-        <input type="text" name="email" id="email" placeholder = "Email Address" required onkeypress="checkemail()">
-        <p class="warningtext warning">Invalid Email</p>
-        <input type="text" name="username" id="username" placeholder = "Username" required > <!-- add the eye icon-->
-        <input type="password" placeholder = "password" name="password" required onkeypress = "checkpassword()" id = "password">
-        <p class="warningpassword warning">Password Must Be 8-16 Characters Only</p>
-        <p>Date of Birth</p>
-        <input type="date" name="DOB" id="DOB" required>
-        <p class="warningdate warning">You must be 18 years old and above to register an account</p>
-        <button class = "next">Next</button>
-        <p class="warningaccount">An account with the same username,email or password has already been created</p>
+    <div class ="container2">
+        <div id="login-box">
+            <div class="leftbox">
+                <div class="header"></div>
+                <h1>Create an account</h1>
+                <div class="signup">
+                    <p>Account Info</p>
+                    <input type="text" name="email" id="email" placeholder = "Email Address" required onkeypress="checkemail()">
+                    <p class="warningtext warning">Invalid Email</p>
+                    <input type="text" name="username" id="username" placeholder = "Username" required > <!-- add the eye icon-->
+                    <input type="password" placeholder = "Password" name="password" required onkeypress = "checkpassword()" id = "password">
+                    <p class="warningpassword warning">Password Must Be 8-16 Characters Only</p>
+                    <p>Date of Birth</p>
+                    <input type="date" name="DOB" id="DOB" required>
+                    <p class="warningdate warning">You must be 18 years old and above to register an account</p>
+                    <p> </p>
+                    <button class = "next">Next</button>
+                    <p class="warningaccount">An account with the same username,email or password has already been created</p>
+                </div>
+                <div class="TOC">
+                    <p class = "TOCheader">Terms and Conditions</p>
+                    <p class="TOCtext">Welcome to FaczBricks.com<br>This terms of agreement is a legal agreement between you and Facz Bricks, a demo site for a school project. By clicking on the accept TOC box, you acknowledge that you have read and agreed with the TOCs. Failure to do so means you are unable to create an account</p>
+                    <input type="checkbox" name="TOC" id="TOC" required>
+                    <label for="TOC">By checking this box, I confirm that i have read, understand and agree to the Terms and Conditions above and that any lose of data if any inputted is real is not our fault.</label>
+                    <p class="warningcheckbox warning">You have to check this option to create an account</p>
+                    <button class="createacc">Create Account</button>
+                </div>
+                <div class="confirm hidden"></div>
+                <div class="footer"></div>
+            </div>
+            <div class="right-box">
+                <span class="signinwith">Sign in with<br/>Social Network</span>
+            <button class="social facebook">Login with Facebook</button>
+            <button class="social twitter">Login with Twitter</button> 
+            <button class="social insta">Login with Instagram</button>     
+            </div>
+            <div class="or">OR</div>
+        </div>
     </div>
-    <div class="TOC">
-        <p class = "TOCheader">Terms and Conditions</p>
-        <p class="TOCtext">Welcome to FaczBricks.com<br>This terms of agreement is a legal agreement between you and Facz Bricks, a demo site for a school project. By clicking on the accept TOC box, you acknowledge that you have read and agreed with the TOCs. Failure to do so means you are unable to create an account</p>
-        <input type="checkbox" name="TOC" id="TOC" required>
-        <label for="TOC">By checking this box, I confirm that i have read, understand and agree to the Terms and Conditions above and that any lose of data if any inputted is real is not our fault.</label>
-        <p class="warningcheckbox warning">You have to check this option to create an account</p>
-        <button class="createacc">Create Account</button>
-    </div>
-    <div class="confirm hidden"></div>
-    <div class="footer"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script></body>
     <script src="signup.js" defer></script>
 </body>
