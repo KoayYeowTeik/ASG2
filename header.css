@@ -72,6 +72,8 @@ header::after {
     align-items: center;
     background-color: gold;
     color: orange;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .navbar-links ul{
@@ -139,6 +141,24 @@ header::after {
     width: 100%;
     background-color: #B49A9A;
     border-radius: 10px;
+}
+.Paynow{
+    height: 30px;
+    width: 50px;
+}
+.Paypal{
+    height: 30px;
+    width: 80px;
+    
+}
+.VIsa{
+    height: 40px;
+    width: 40px;
+}
+.Mastercard{
+    height: 30px;
+    width: 50px;
+    
 }
 
 @media (max-width:600px) {
