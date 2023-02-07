@@ -1,5 +1,4 @@
 var listing_data = JSON.parse(sessionStorage.getItem("listing_data"))
-console.log(listing_data);
 $("div.listingdetails").append($("<p class = 'listingheader'>"+listing_data.listing_name+"</p>"))
 $("div.listingdetails").append($("<div class = 'listing_description'></div>"));
 $("div.listing_description").append($("<img src = '"+listing_data.listing_pic+"'>"));
@@ -46,8 +45,59 @@ function incrementValue(){
     }
    
 }
-function addcart(){
-    console.log(localStorage.getItem("data"));//null
-    //where to go after adding to cart
+function addcart(){ //check for color for parts 
+    //check if user is logged in
+    if (localStorage.getItem("isLoggedIn") != undefined){
+        listing_details = JSON.parse(sessionStorage.getItem("listing_data"));
+        cart_details = JSON.parse(localStorage.getItem("Buy_listing"));
+        if (listing_details.listing_type != "Part"){
+            if (cart_details[listing_details.listing_id] != undefined){
+                //add quantity
+                cart_details[listing_details.listing_id].buy_quantity = (parseInt(document.querySelector("nobr.quantity_value").innerText)+parseInt(cart_details[listing_details.listing_id].buy_quantity)).toString();
+                localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
+            }
+            else{
+                cart_details[listing_details.listing_id] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText};
+                localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
+            }
+        }
+        else{
+            var key = listing_details.listing_id+"_"+listing_details.listing_color
+            if (cart_details[key] != undefined){
+                cart_details[key].buy_quantity = (parseInt(cart_details[key].buy_quantity)+parseInt(document.querySelector("nobr.quantity_value").innerText)).toString();
+                localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
+            }
+            else{
+                cart_details[key] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText};
+                localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
+            }
+        }
+        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":JSON.parse(localStorage.getItem("Likes")),"Buy_listing":cart_details,"Discount_Listing":JSON.parse(localStorage.getItem("Discount_Listing"))};
+        var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": `https://faczbricksdata-e1b3.restdb.io/rest/userdata/${localStorage.getItem("_id")}`,
+        "method": "PUT",
+        "headers": {
+            "content-type": "application/json",
+            "x-apikey": "63dbc5043bc6b255ed0c458e",
+            "cache-control": "no-cache"
+        },
+        "processData": false,
+        "data": JSON.stringify(jsondata)
+        }
+
+        $.ajax(settings).done(function (response) {
+            location.reload();
+        });
+    }
+    else{
+        window.location.href = "Login.html";
+    }
 }
+    //where to go after adding to cart
+
+
+
+
 
