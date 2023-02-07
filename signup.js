@@ -56,11 +56,11 @@ $("button.next").click(function (e) {
                             if ($("input#TOC").is(":checked")){
                                 $("p.warningcheckbox").hide();
         
-                                var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val(),"Likes_listing":{},"Buy_listing":{},"Discount_Listing":{}};
+                                var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val(),"Likes_listing":{} ,"Buy_listing":{},"Discount_Listing":{}};
                                 var settings = {
                                 "async": true,
                                 "crossDomain": true,
-                                "url": "https://faczbricksdata-e1b3.restdb.io/rest/userdata",
+                                "url": "https://faczbricksdata-e1b3.restdb.io/rest/dafacz",
                                 "method": "POST",
                                 "headers": {
                                     "content-type": "application/json",

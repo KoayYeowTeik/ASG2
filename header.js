@@ -22,7 +22,7 @@ $("img.logoimg").click(function (e) {
     e.preventDefault();
     window.location.href = "homepage.html";
 });
-$("header").after($("<img src = 'Images/HeaderImage.png' class = 'headerbackground'>"))
+$("header").after($("<img src = 'Images/HeaderImage.png' class = 'headerbackground'>"));
 
 
 

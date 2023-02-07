@@ -33,6 +33,7 @@ $("button.login").click(function (e) {
               }
               
               $.ajax(settings).done(function (response) {
+                console.log(response);
                 for (let i = 0;i<response.length;i++){
                     if (response[i].email == $("input#email").val() && response[i].password == $("input#password").val()){
                         localStorage.setItem("email",response[i].email);
@@ -42,6 +43,8 @@ $("button.login").click(function (e) {
                         localStorage.setItem("Likes",JSON.stringify(response[i].Likes_listing));
                         localStorage.setItem("Buy_listing",JSON.stringify(response[i].Buy_listing));
                         localStorage.setItem("Discount_Listing",JSON.stringify(response[i].Discount_Listing));
+                        localStorage.setItem("DOB",(response[i].DOB).slice(0,10));
+                        localStorage.setItem("_id",response[i]._id);
                         window.location.href = "homepage.html";
                         break;
                     }
@@ -53,5 +56,3 @@ $("button.login").click(function (e) {
     }
     else {$("p.warningtext").show()}
 });
-/*if (($("input#email").val()).match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)){
-    if ($("input#password").val().length >= 7 && ($("input#password").val()).length <= 16){*/
