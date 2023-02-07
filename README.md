@@ -22,6 +22,11 @@ GAME 2 IDEA - Kenan
 Fruit Ninja(Lego Brick Version)
 Cut as many Bricks as possible to earn prizes
 
+
+
+
+
+##YEOW TEIK
 Update 1.0
 Creation of JS code for header and footer where one Javascript code is able to display all that data at every page, usage of pure Javascript
 Patch 1.1
@@ -29,6 +34,11 @@ Idea of creating a search bar
 Patch 1.2 
 Creation of data in the RestDB database and wrote GET data from the RestDB for listing data.
 Creation of a simple search function to loop through the entire listing data to match the listing name of what i am looking for.
+Patch 1.3 --> Update 5.0
+Idea searching for category?
+
+
+
 
 
 
@@ -71,6 +81,12 @@ Patch 4.6 Finalised CSS and HTML for the login page and fixed the button issue l
 
 
 
+Update 5.0
+Creation of the listing.html page where every listing data is displayed from the data from session storage which is set from the listing clicked from search bar or the listing results
+did the simple html
+changed the quantity function where a user can only change quantity to >0 and less than the total quantity of the listing from the database
+added a add to cart function where when added to cart, the user buy_listing key value pair value will change to add the listing object (RestDB Buy_listing data will also be updated)
+Listing.html and js finished -- awaiting partner for css
 
 
 
