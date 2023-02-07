@@ -24,8 +24,11 @@ Cut as many Bricks as possible to earn prizes
 
 Update 1.0
 Creation of JS code for header and footer where one Javascript code is able to display all that data at every page, usage of pure Javascript
-Update 1.1
+Patch 1.1
 Idea of creating a search bar
+Patch 1.2 
+Creation of data in the RestDB database and wrote GET data from the RestDB for listing data.
+Creation of a simple search function to loop through the entire listing data to match the listing name of what i am looking for.
 
 
 
