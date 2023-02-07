@@ -1,7 +1,7 @@
 var listing_data = JSON.parse(sessionStorage.getItem("listing_data"))
 $("div.listingdetails").append($("<p class = 'listingheader'>"+listing_data.listing_name+"</p>"))
 $("div.listingdetails").append($("<div class = 'listing_description'></div>"));
-$("div.listing_description").append($("<img src = '"+listing_data.listing_pic+"'>"));
+$("div.listing_description").append($("<img class = 'nimby-img' src = '"+listing_data.listing_pic+"'>"));
 $("div.listing_description").append($("<div class = 'listing_details'></div>"));
 if (parseInt(listing_data.listing_quantity) > 0 ){
     $("div.listing_details").append($("<p class = 'instock'>Still "+parseInt(listing_data.listing_quantity)+" units in stock</p>"));
