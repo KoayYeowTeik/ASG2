@@ -1,83 +1,105 @@
 var settings = {
-  "async": true,
-  "crossDomain": true,
-  "url": "https://faczbricksdata-e1b3.restdb.io/rest/listingdata",
-  "method": "GET",
-  "headers": {
-    "content-type": "application/json",
-    "x-apikey": "63dbc5043bc6b255ed0c458e",
-    "cache-control": "no-cache"
+    "async": true,
+    "crossDomain": true,
+    "url": "https://faczbricksdata-e1b3.restdb.io/rest/listingdata",
+    "method": "GET",
+    "headers": {
+      "content-type": "application/json",
+      "x-apikey": "63dbc5043bc6b255ed0c458e",
+      "cache-control": "no-cache"
+    }
   }
-}
-let res;
-$.ajax(settings).done(function (response) {
-    var category_list = [];
-    for (let i = 0;i<response.length;i++){
-        if (category_list.indexOf(response[i].listing_type.toUpperCase()) == -1){
-            category_list.push(response[i].listing_type.toUpperCase());
-        }
-        else{
-            continue;
-        }
-        res = response;
-        var ul = document.querySelector("ul.searchresult");
-        var li = ul.appendChild(document.createElement("li"));
-        li.className = "result"
-        li.style.display = "none";
-        var a = li.appendChild(document.createElement("a"));
-        a.href = "#";
-        a.appendChild(document.createTextNode(response[i].listing_name));
-    }
+  $.ajax(settings).done(function (response) {
+    like = JSON.parse(localStorage.getItem("Likes"));
+    res = response;
     for (var i = 0;i<5;i++){
-    var value = Math.floor(Math.random() * response.length);
-    $("div.foryou-listing-container").append($('\
-    <a href = "#">\
+    var listing = response[Math.floor(Math.random() * response.length)]
+
+    var key2;
+    if (listing.listing_type != "Part"){
+        key2 = listing.listing_id;
+    }
+    else{
+        key2 = listing.listing_id+"_"+listing.listing_color
+    }
+    if (like[key2] == undefined){
+        $("div.foryou-listing-container").append($('\
     <div class="listing-container">\
-        <p class="listing-name">'+response[value].listing_name+'</p>\
-        <img class = "listing-image" src="'+response[value].listing_pic+'" alt="">\
-        <p class="listing-price">$'+response[value].listing_price.toFixed(2)+'</p>\
-        <p class="view-click">Click To View</p>\
-    </div>\
-    </a>'))}
-});
-$("div.foryou-listing-container").on("click","a",function(){
-    for(let i = 0;i<res.length;i++){
-        if (res[i].listing_name ==this.children[0].children[0].innerText){
-            sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
-            window.location.href = "listing.html";
-        }
+                <a href="#">\
+                    <div class="listing-details">\
+                        <p class="listing-name">'+listing.listing_name+'</p>\
+                        <p class="listing-price">$'+listing.listing_price+'</p>\
+                        <img class = "listing-pic" src="'+listing.listing_pic+'" alt="">\
+                    </div>\
+                </a>\
+                <i class = "fa fa-heart-o" style = "padding-top:10px;padding-bottom:10px;"></i>\
+    </div>'))
     }
-})
-
-
-
-
-
-
-function Search(){
-    let li = document.getElementsByClassName("result");
-    for (let i = 0;i<li.length;i++){
-        if ($("input#search").val() == ""){
-            li[i].style.display = "none";
-        }
-        else if (((li[i].innerText).toUpperCase()).indexOf(($("input#search").val()).toUpperCase()) > -1){
-            li[i].style.display = "block";
-        }
-        else{
-            li[i].style.display = "none";
-        }
-    } 
-}
-$("ul.searchresult").on("click", "a", function() {
-    for (let i = 0;i<res.length;i++){
-        if (res[i].listing_name == this.innerText){
-            sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
-            window.location.href = "listing.html";
-        }
+    else{
+        $("div.foryou-listing-container").append($('\
+    <div class="listing-container">\
+                <a href="#">\
+                    <div class="listing-details">\
+                        <p class="listing-name">'+listing.listing_name+'</p>\
+                        <p class="listing-price">$'+listing.listing_price+'</p>\
+                        <img class = "listing-pic" src="'+listing.listing_pic+'" alt="">\
+                    </div>\
+                </a>\
+                <i class = "fa fa-heart" style = "padding-top:10px;padding-bottom:10px;"></i>\
+    </div>'))
     }
-});
+   
+    $("div.listing-container").css("background-color", "yellow");
+    }
+    $("div.foryou").on("click", "a", function() {
+        for (let i = 0;i<res.length;i++){
+            if (res[i].listing_name == this.children[0].children[0].innerText){
+                sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
+                window.location.href = "listing.html";
+            }
+        }
+    });
+    $("i.fa").click(function (e) { 
+        e.preventDefault();
+        var Likes = JSON.parse(localStorage.getItem("Likes"));
+        console.log(Likes);
+        for (var i = 0;i<res.length;i++){
+            if (res[i].listing_name == this.previousElementSibling.children[0].children[0].innerText){
+                var key;
+                if(res[i].listing_type == "Part"){
+                    key = res[i].listing_id+"_"+res[i].listing_color;
+                }
+                else{
+                    key = res[i].listing_id
+                }
+                if (this.className == "fa fa-heart-o"){
+                    this.className = "fa fa-heart";
+                    Likes[key] = res[i];
+                }
+                else{//if it is liked alr
+                    this.className = "fa fa-heart-o";
+                    delete Likes[key]; 
+                }
+                localStorage.setItem("Likes",JSON.stringify(Likes));
+                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":JSON.parse(localStorage.getItem("Discount_Listing"))};
+                var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://faczbricksdata-e1b3.restdb.io/rest/userdata/${localStorage.getItem("_id")}`,
+                "method": "PUT",
+                "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "63dbc5043bc6b255ed0c458e",
+                    "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+                }
+        
+                $.ajax(settings).done(function (response) {
+                });
+            }
+        }
 
-
-
-
-
+    });
+  });
