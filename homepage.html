@@ -12,6 +12,7 @@
 <body>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script></body>
     <script src="header.js" defer></script>
+    <script src="search.js" defer></script>
     <script src="homepage.js" defer></script>
     <div class="announcement">
 
@@ -19,18 +20,21 @@
         <input type="text" placeholder = "Search in the entire store" id = "search" onkeyup = "Search()">
         <ul class="searchresult"></ul>
     <div class="category">
-        
+        <p class="listingheader"><b>Categories</b></p>
+        <div class="category-container">
+        </div>
     </div>
-
-    <div class="new"></div>
 
     <div class="foryou">
         <p class="listingsheader"><b>For You</b></p>
-        <div class="foryou-listing-container"></div>
-<!--DOING HERE-->
+        <div class="foryou-listing-container">
+        </div>
     </div>
 
-    <div class="popular"></div>
+    <div class="popular">
+        <p class="listingheader"><b>Popular Items</b></p>
+        <div class="popular-listing-container"></div>
+    </div>
 
     <div class="otherinfo"></div>
 
