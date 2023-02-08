@@ -1,3 +1,68 @@
 .checked{
     color:orange;
 }
+body{
+    background: peachpuff;
+}
+.reviewdata{
+    position: relative;
+    margin: 5% auto;
+    height: 1200px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+.reviewcontainer{
+    justify-content: space-around;
+}
+.review{
+    text-align: center;
+}
+button{
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px;
+    width: 120px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: orange;
+    display: inline-block;
+}
+.userreview{
+    padding-top: 50px;
+    padding-left: 20px;
+    position: relative;
+    margin: 5% auto;
+    height: 400px;
+    width: 600px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    background-image: url("https://media.istockphoto.com/id/579434558/photo/two-lego-minifigures-scared-and-happy.jpg?s=612x612&w=0&k=20&c=gfs9u-Gj_Tzxbzk061kZJCzLoga7Zg7CVILAr4pgbHk=");
+
+}
+input[type="text"]
+{
+    display: block;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 4px;
+    width: 220px;
+    height: 32px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgray;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+    text-align: center;
+    
+}
+.limpy{
+    text-align: center;
+    justify-content: space-between;
+}
