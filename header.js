@@ -14,10 +14,11 @@ if (localStorage.getItem("isLoggedIn") == "true"){
     $("a.login").hide();
 }
 else{$("a.login").show()}
-$("ul:first").append($("<li><a href='like.html'>Likes</a></li>"));
 $("ul:first").append($("<li><a href='account.html'>Account</a></li>"));
-$("ul:first").append($("<li><a href='cart.html'>Cart</a></li>"));
 $("ul:first").append($("<li><a href = 'community.html'>Community</a></li>"));
+$("ul:first").append($("<li><a href='like.html'><i class='fa fa-heart' aria-hidden='true'></i></a></li>"));
+$("ul:first").append($("<li><a href='cart.html'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a></li>"));
+
 $("img.logoimg").click(function (e) { 
     e.preventDefault();
     window.location.href = "homepage.html";
