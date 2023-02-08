@@ -27,6 +27,7 @@ $("img.logoimg").click(function (e) {
 
 
 
+
 /*//if login == false:
 var headernavbutton = headernav.appendChild(document.createElement("button"))
 headernavbutton.className =  "headernavbutton";

@@ -62,7 +62,6 @@ var settings = {
     $("i.fa").click(function (e) { 
         e.preventDefault();
         var Likes = JSON.parse(localStorage.getItem("Likes"));
-        console.log(Likes);
         for (var i = 0;i<res.length;i++){
             if (res[i].listing_name == this.previousElementSibling.children[0].children[0].innerText){
                 var key;
