@@ -59,8 +59,9 @@ var settings = {
             }
         }
     });
-    $("i.fa").click(function (e) { 
+    $("div.listing-container").on("click","i",function (e) {
         e.preventDefault();
+        console.log(this);
         var Likes = JSON.parse(localStorage.getItem("Likes"));
         for (var i = 0;i<res.length;i++){
             if (res[i].listing_name == this.previousElementSibling.children[0].children[0].innerText){
@@ -99,6 +100,6 @@ var settings = {
                 });
             }
         }
-
     });
+
   });
