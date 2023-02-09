@@ -36,6 +36,12 @@ Creation of data in the RestDB database and wrote GET data from the RestDB for l
 Creation of a simple search function to loop through the entire listing data to match the listing name of what i am looking for.
 Patch 1.3 --> Update 5.0
 Idea searching for category?
+Patch 1.3
+Completed randomly generated listings where for you page just shows random listings that the user may like
+Update 1.4
+Created a like system where user can like listings and click like or unlike(Likes will be saved to the DB so in future the user reloads the page the likes listings are still there)
+Patch 1.5 
+Fixed an issue where clicking on nav bar icons will call upon the like system functions which causes directory and code error in the "click" to "on("click") by changing the range of the function being activated by the div
 
 
 
