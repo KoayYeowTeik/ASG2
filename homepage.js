@@ -11,6 +11,7 @@ var settings = {
   }
   $.ajax(settings).done(function (response) {
     like = JSON.parse(localStorage.getItem("Likes"));
+    if (like != null){
     res = response;
     for (var i = 0;i<5;i++){
     var listing = response[Math.floor(Math.random() * response.length)]
@@ -22,7 +23,7 @@ var settings = {
     else{
         key2 = listing.listing_id+"_"+listing.listing_color
     }
-    if (like[key2] == undefined){
+    if (like[key2] == undefined){   
         $("div.foryou-listing-container").append($('\
     <div class="listing-container">\
                 <a href="#">\
@@ -35,6 +36,7 @@ var settings = {
                 <i class = "fa fa-heart-o" style = "padding-top:10px;padding-bottom:10px;"></i>\
     </div>'))
     }
+
     else{
         $("div.foryou-listing-container").append($('\
     <div class="listing-container">\
@@ -51,6 +53,23 @@ var settings = {
    
     $("div.listing-container").css("background-color", "yellow");
     }
+}
+else{
+    for (var i = 0;i<5;i++){
+        var listing = response[Math.floor(Math.random() * response.length)];
+        $("div.foryou-listing-container").append($('\
+        <div class="listing-container">\
+                    <a href="#">\
+                        <div class="listing-details">\
+                            <p class="listing-name">'+listing.listing_name+'</p>\
+                            <p class="listing-price">$'+listing.listing_price+'</p>\
+                            <img class = "listing-pic" src="'+listing.listing_pic+'" alt="">\
+                        </div>\
+                    </a>\
+                    <i class = "fa fa-heart-o" style = "padding-top:10px;padding-bottom:10px;"></i>\
+        </div>'))
+        $("div.listing-container").css("background-color", "yellow");
+}
     $("div.foryou").on("click", "a", function() {
         for (let i = 0;i<res.length;i++){
             if (res[i].listing_name == this.children[0].children[0].innerText){
@@ -61,7 +80,7 @@ var settings = {
     });
     $("div.listing-container").on("click","i",function (e) {
         e.preventDefault();
-        console.log(this);
+        if (localStorage.getItem("isLoggedIn") == "true"){
         var Likes = JSON.parse(localStorage.getItem("Likes"));
         for (var i = 0;i<res.length;i++){
             if (res[i].listing_name == this.previousElementSibling.children[0].children[0].innerText){
@@ -99,7 +118,10 @@ var settings = {
                 $.ajax(settings).done(function (response) {
                 });
             }
+        }}
+        else{
+            window.location.href = "login.html";
         }
     });
 
-  });
+  }});

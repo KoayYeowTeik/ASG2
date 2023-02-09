@@ -9,15 +9,15 @@ for (let i = 0;i<3;i++){
 $("nav.navbar").append($("<div class = 'navbar-links'></div>"));
 $("div.navbar-links").append($("<ul></ul>"));
 $("ul:first").append($("<img src = 'Images/FACZ-BRICKS-ICON.png' class = 'logoimg'>"));
-$("ul:first").append($("<li><a href = 'Login.html' class = 'login'>Login/Sign up</a></li>"));
+$("ul:first").append($("<li><a href = 'Login.html' class = 'login'><i class='fa fa-sign-in' aria-hidden='true'></i> Login</a></li>"));
 if (localStorage.getItem("isLoggedIn") == "true"){
     $("a.login").hide();
 }
 else{$("a.login").show()}
-$("ul:first").append($("<li><a href = 'community.html'><i class='fa fa-users' aria-hidden='true'></i></a></li>"));
-$("ul:first").append($("<li><a href='account.html'><i class='fa fa-user' aria-hidden='true'></i></a></li>"));
-$("ul:first").append($("<li><a href='like.html'><i class='fa fa-heart' aria-hidden='true'></i></a></li>"));
-$("ul:first").append($("<li><a href='cart.html'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a></li>"));
+$("ul:first").append($("<li><a href = 'community.html'><i class='fa fa-users' aria-hidden='true'></i> Community</a></li>"));
+$("ul:first").append($("<li><a href='account.html'><i class='fa fa-user' aria-hidden='true'></i> Account</a></li>"));
+$("ul:first").append($("<li><a href='like.html'><i class='fa fa-heart' aria-hidden='true'></i> Likes</a></li>"));
+$("ul:first").append($("<li><a href='cart.html'><i class='fa fa-shopping-cart' aria-hidden='true'></i> Cart</a></li>"));
 
 $("img.logoimg").click(function (e) { 
     e.preventDefault();
