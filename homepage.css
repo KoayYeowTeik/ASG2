@@ -1,70 +1,10 @@
-/*body{
-    margin:0;
-    padding:0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.slider{
-    width: 800px;
-    height: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.slides{
-    width: 500%;
-    height: 500px;
-    display: flex;
 
+body{
+    background: url("https://t4.ftcdn.net/jpg/02/90/45/59/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
 }
-.slides input{
-    display:none;
-}
-.slide{
-    width: 20%;
-    transition: 2s;
-}
-.slide img{
-    width:800px;
-    height: 500px;
-}
-.nav-manual{
-    position: absolute;
-    width: 800px;
-    display: flex;
-    margin-top: -40px;
-    justify-content: center;
-}
-.manualbtn{
-    border:2px solid orange;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-.manualbtn:not(last-child){
-    margin-right:40px;
-}
-.manualbtn:hover{
-    background: orangered;
-}
-#radio1:checked ~ .first{
-    margin-left:0;
-}
-#radio2:checked ~ .first{
-    margin-left:-20%;
-}
-#radio3:checked ~ .first{
-    margin-left:-40%;
-}
-#radio4:checked ~ .first{
-    margin-left:-60%;
-}*/
 .container2{
     height: 220%;
     width: 100%;
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpapers.com/images/hd/hd-lego-bricks-background-qsznux1skhp0v1m7.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -80,10 +20,9 @@
     border-radius: 60px;
     padding: 10px 20px;
     backdrop-filter: blur(4px) saturate(180%);
-    margin-top: 300px;
+    margin-top: 100px;
+    margin-left: 280px;
     text-align: center;
-    margin-left: 250px;
-
 }
 .search-bar input{
     background: transparent;
@@ -108,4 +47,87 @@
     height: 60px;
     background: #adb5e4;
     cursor: pointer;
+}
+.for-you{
+    text-align: center;
+}
+.foryou-listing-container{
+    flex: 0 0 30%;
+    max-width: 100%;
+    position: relative;
+    padding: 18px;
+    text-align: center;
+    margin-left: 50px;
+}
+.listing-container{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    margin: 10px;
+}
+img{
+    width: 100px;
+    height:100px;
+}
+.searchresult{
+    text-align: center;
+}
+@media(max-width:967px){
+    .foryou-listing-container{
+        flex: 0 0 70%;
+        max-width: 70%;
+        position: relative;
+        padding:8px;
+        margin-left: 100px;
+    }
+    .listing-container{
+        flex: 0 0 30%;
+        max-width: 30%;
+        position: relative;
+        padding:8px;
+    }
+    .search-bar{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+}
+@media(max-width:767px){
+    .foryou-listing-container{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+        margin-left: 170px;
+    }
+    .listing-container{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+    }
+    .search-bar{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 10px;
+    }
+}
+@media(max-width:500px){
+    .foryou-listing-container{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+    .listing-container{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .search-bar{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
 }
