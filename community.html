@@ -13,18 +13,61 @@
 <body>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script></body>
     <script src="header.js" defer></script>
-    <div class="container2">
-        <h1>Facz Bricks Community Page</h1>
-        <div class="video">
-            <video width="320" height="240" controls>
-                <source src="" type="video/mp4">
-                <source src="" type="video/ogg">
-              Your browser does not support the video tag.
-            </video>
+    <section class="community">
+        <div class="container">
+            <div class="row">
+                <div class="section-title text-center">
+                    <h1>Community</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="filter-buttons">
+                    <ul id="filter-btns">
+                        <li class="active" data-target="All">All</li>
+                        <li data-target="Vid">Videos</li>
+                        <li data-target="Images">Images</li>
+                        <li data-target="Memes">Memes</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="gallery">
+                    <div class="item" data-id="Videos">
+                        <div class="inner">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/el-HtcY1Aek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    
+                    <div class="item" data-id="Images">
+                        <div class="inner">
+                            <img src="Images/LEGO-CITY.png" alt="pictures">
+                        </div>
+                    </div>
+                    <div class="item" data-id="Images">
+                        <div class="inner">
+                            <img src="Images/LEGO-CNY.png" alt="pictures">
+                        </div>
+                    </div>
+                    <div class="item" data-id="Images">
+                        <div class="inner">
+                            <img src="Images/LEGO-MINECRAFT.png" alt="pictures">
+                        </div>
+                    </div>
+                    <div class="item" data-id="Images">
+                        <div class="inner">
+                            <img src="Images/LEGO-NINJAGO.png" alt="pictures">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+        <script src="community.js"></script>
 
         <div class="footer"></div>
-    </div>
+    </section>
     
 </body>
 </html>
