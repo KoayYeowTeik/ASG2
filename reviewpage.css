@@ -2,16 +2,19 @@
     color:orange;
 }
 body{
-    background: peachpuff;
+    background: url("https://t4.ftcdn.net/jpg/02/90/45/59/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
 }
 .reviewdata{
     position: relative;
     margin: 5% auto;
-    height: 1200px;
+    height: auto;
     width: 600px;
-    background: #fff;
+    background-image: url("https://assets-global.website-files.com/5c7fdbdd4e3feeee8dd96dd2/6131cd751e57a81d1e432ae8_hero.jpeg");
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
     text-align: center;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 20px;
 }
 .reviewcontainer{
     justify-content: space-around;
@@ -37,12 +40,13 @@ button{
     padding-left: 20px;
     position: relative;
     margin: 5% auto;
-    height: 400px;
+    height: auto;
     width: 600px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    background-image: url("https://media.istockphoto.com/id/579434558/photo/two-lego-minifigures-scared-and-happy.jpg?s=612x612&w=0&k=20&c=gfs9u-Gj_Tzxbzk061kZJCzLoga7Zg7CVILAr4pgbHk=");
-
+    background-image: url("https://i.pinimg.com/originals/00/73/c1/0073c10fba125eb99f5f4475f3f1c828.jpg");
+    background-size: cover;
+    border-radius: 20px;
 }
 input[type="text"]
 {
@@ -62,7 +66,60 @@ input[type="text"]
     text-align: center;
     
 }
+.submitreview{
+    margin-top:30px ;
+    margin-bottom: 20px;
+}
 .limpy{
     text-align: center;
     justify-content: space-between;
+    padding: 20px;
+}
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0!important;
+    background: white;
+    background-image: none;
+    font-size: 1em;
+    font-family: sans-serif;
+    flex: 1;
+    padding:0 .5em;
+    color:black;
+    cursor: pointer;
+
+}
+select::-ms-expand{
+    display: none;
+}
+.selecty{
+
+    position:relative;
+    display: flex;
+    height: 3em;
+    width: 20em;
+    line-height: 3;
+    background: orange;
+    overflow: hidden;
+    border-radius:.25em;
+
+
+}
+.selecty::after{
+    content:'\25BC';
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 0 1em;
+    background: yellow;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 25s all ease;
+}
+.selecty:hover::after{
+    color: orangered;
 }
