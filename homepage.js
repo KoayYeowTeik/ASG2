@@ -12,6 +12,7 @@ var settings = {
   $.ajax(settings).done(function (response) {
     like = JSON.parse(localStorage.getItem("Likes"));
     if (like != null){
+    console.log("loggedin")
     res = response;
     for (var i = 0;i<5;i++){
     var listing = response[Math.floor(Math.random() * response.length)]
@@ -53,8 +54,62 @@ var settings = {
    
     $("div.listing-container").css("background-color", "yellow");
     }
+    $("div.foryou").on("click", "a", function() {
+        for (let i = 0;i<res.length;i++){
+            if (res[i].listing_name == this.children[0].children[0].innerText){
+                sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
+                window.location.href = "listing.html";
+            }
+        }
+    });
+    $("div.listing-container").on("click","i",function (e) {
+        e.preventDefault();
+        if (localStorage.getItem("isLoggedIn") == "true"){
+        var Likes = JSON.parse(localStorage.getItem("Likes"));
+        for (var i = 0;i<res.length;i++){
+            if (res[i].listing_name == this.previousElementSibling.children[0].children[0].innerText){
+                var key;
+                if(res[i].listing_type == "Part"){
+                    key = res[i].listing_id+"_"+res[i].listing_color;
+                }
+                else{
+                    key = res[i].listing_id
+                }
+                if (this.className == "fa fa-heart-o"){
+                    this.className = "fa fa-heart";
+                    Likes[key] = res[i];
+                }
+                else{//if it is liked alr
+                    this.className = "fa fa-heart-o";
+                    delete Likes[key]; 
+                }
+                localStorage.setItem("Likes",JSON.stringify(Likes));
+                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":JSON.parse(localStorage.getItem("Discount_Listing"))};
+                var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://faczbricksdata-e1b3.restdb.io/rest/userdata/${localStorage.getItem("_id")}`,
+                "method": "PUT",
+                "headers": {
+                    "content-type": "application/json",
+                    "x-apikey": "63dbc5043bc6b255ed0c458e",
+                    "cache-control": "no-cache"
+                },
+                "processData": false,
+                "data": JSON.stringify(jsondata)
+                }
+        
+                $.ajax(settings).done(function (response) {
+                });
+            }
+        }}
+        else{
+            window.location.href = "login.html";
+        }
+    });
 }
 else{
+    console.log("not logged in")
     for (var i = 0;i<5;i++){
         var listing = response[Math.floor(Math.random() * response.length)];
         $("div.foryou-listing-container").append($('\

@@ -42,7 +42,9 @@ Update 1.4
 Created a like system where user can like listings and click like or unlike(Likes will be saved to the DB so in future the user reloads the page the likes listings are still there)
 Patch 1.5 
 Fixed an issue where clicking on nav bar icons will call upon the like system functions which causes directory and code error in the "click" to "on("click") by changing the range of the function being activated by the div
-
+Patch 1.6
+Fixed an issue where the JS code for the like system for generating previous like conflicted with the Login where users not logged in cannot generate the for you page because it toook data from the local storage which does not exist if login is not done
+Added a conditional statement to the page where it now detects if  user is logged in to generate the listings with previous likes.
 
 
 
@@ -93,6 +95,12 @@ did the simple html
 changed the quantity function where a user can only change quantity to >0 and less than the total quantity of the listing from the database
 added a add to cart function where when added to cart, the user buy_listing key value pair value will change to add the listing object (RestDB Buy_listing data will also be updated)
 Listing.html and js finished -- awaiting partner for css
+
+Update 6.0
+Account html and js creation - added simple buttons to what an account page typically has
+6.1:
+Starting to implement the game page where account page divs will all disappear except the header and the game div will load
+
 
 
 
