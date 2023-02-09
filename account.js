@@ -13,10 +13,7 @@ else{
             $("div.gamebox").append("<img src = 'Images/gamebrick.png' id = 'slider"+i+"' class = 'animate slider'>")
         }
         //game here
-        $("button.stop").click(function (e) { 
-            e.preventDefault();
-            
-        });
+
     })
     $("button.logout").click(function (e) { 
         e.preventDefault();
@@ -30,3 +27,28 @@ else{
         $("div.game").hide();
     })
 }
+function StopSliding(slider){
+    event.preventDefault();
+    if (slider >= 26){
+        //losing here
+        alert("end");
+    }
+    if (slider == 1){
+        var belowSlider = document.getElementById("slider"+slider);
+    }
+    else{
+        var belowSlider = document.getElementById("slider"+(slider-1));
+    }
+    var currentSlider = document.getElementById("slider"+slider);
+    var aboveSlider = document.getElementById("slider"+(slider+1));
+    $(currentSlider).css("left",$(currentSlider).css("left"));
+    console.log($(currentSlider).css("left"));
+    console.log($(currentSlider).css("width"));
+    currentSlider.classList.remove("animate");
+    var stopbtn = document.getElementsByClassName("stop")
+    const button = document.querySelector("button.stop");
+    $(aboveSlider).css("visibility","visible");
+    button.setAttribute("onclick","StopSliding("+(slider+1)+")");
+
+}
+
