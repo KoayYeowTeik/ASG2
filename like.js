@@ -16,7 +16,7 @@ else{
                 </a>\
                 <i class = "fa fa-heart" style = "padding-top:10px;padding-bottom:10px;"></i>\
     </div>'));
-    $("div.listing-container").css("background-color", "yellow");
+    $("div.listing-container").css("background-image", "Images/gamebrick.png");
 
     }
 }
