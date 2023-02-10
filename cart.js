@@ -55,7 +55,14 @@ var settings = {
             var total = parseFloat(parseFloat(listing_data.listing_price)*parseFloat(cart[item].buy_quantity));
             Subtotal += total;
         } 
-        document.querySelector("span.SUBTOTALHERE").innerText =Subtotal.toFixed(2); 
+        var pts = parseInt(localStorage.getItem("Discount_Listing"));
+        document.querySelector("span.POINTS").innerText  = pts;
+        if ((Subtotal-(pts/100) < 0)){
+            document.querySelector("span.SUBTOTALHERE").innerText = 0;
+        }
+        else{
+        document.querySelector("span.SUBTOTALHERE").innerText = (Subtotal-(pts/100)).toFixed(2);
+        }
     }
 
     $("i.fa-trash").click(function (e) { 
@@ -152,7 +159,7 @@ var settings = {
         });
     })
     $("button.checkout").click(function(e){
-        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"Buy_listing":{}};
+        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"Buy_listing":{},"Discount_Listing":0};
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -169,6 +176,7 @@ var settings = {
         
         $.ajax(settings).done(function (response) {
             localStorage.setItem("Buy_listing",JSON.stringify({}));
+            localStorage.setItem("Discount_Listing",0);
             alert("Thank you for placing an order, we hope to see you again soon!")
             window.location.href = "homepage.html";
           
