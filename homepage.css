@@ -2,15 +2,7 @@
 body{
     background: url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
 }
-.container2{
-    height: 220%;
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    background-attachment: fixed;
-    overflow: hidden ;
-}
+
 .search-bar{
     width: 100%;
     max-width: 700px;
@@ -167,7 +159,6 @@ img{
         margin-left: 0px;
     }
 }
-
 .fa-heart{
     color: red;
 }

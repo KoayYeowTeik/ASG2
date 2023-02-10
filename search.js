@@ -21,8 +21,18 @@ var settings = {
           a.href = "#";
           a.appendChild(document.createTextNode(response[i].listing_name));
       }
+
+      $("ul.searchresult").on("click", "a", function() {
+        console.log("clicked");
+          for (let i = 0;i<res.length;i++){
+              if (res[i].listing_name == this.innerText){
+                  sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
+                  window.location.href = "listing.html";
+              }
+          }
+      });
   });
-  function Search(){
+function Search(){
       let li = document.getElementsByClassName("result");
       for (let i = 0;i<li.length;i++){
           if ($("input#search").val() == ""){
@@ -36,14 +46,9 @@ var settings = {
           }
       }
   }
-  $("ul.searchresult").on("click", "a", function() {
-      for (let i = 0;i<res.length;i++){
-          if (res[i].listing_name == this.innerText){
-              sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
-              window.location.href = "listing.html";
-          }
-      }
-  });
+
+
+
   
 
 

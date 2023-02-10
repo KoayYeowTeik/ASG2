@@ -106,7 +106,8 @@ var settings = {
                 localStorage.setItem("Buy_listing",JSON.stringify(cart));
             }
         }
-        this.parentElement.parentElement.parentElement.children[4].innerText = "$"+(parseFloat(this.parentElement.children[1].innerText)*parseInt(listing_data.listing_price)).toFixed(2);
+
+        this.parentElement.parentElement.parentElement.children[4].innerText = "$"+(parseFloat(this.parentElement.children[1].innerText)*parseFloat(listing_data.listing_price)).toFixed(2);
         UpdateSubtotal();
 
         
@@ -134,7 +135,7 @@ var settings = {
                 localStorage.setItem("Buy_listing",JSON.stringify(cart));
             }
         }
-        this.parentElement.parentElement.parentElement.children[4].innerText = "$"+(parseFloat(this.parentElement.children[1].innerText)*parseInt(listing_data.listing_price)).toFixed(2);
+        this.parentElement.parentElement.parentElement.children[4].innerText = "$"+(parseFloat(this.parentElement.children[1].innerText)*parseFloat (listing_data.listing_price)).toFixed(2);
         UpdateSubtotal();
         
     })
@@ -177,8 +178,7 @@ var settings = {
         $.ajax(settings).done(function (response) {
             localStorage.setItem("Buy_listing",JSON.stringify({}));
             localStorage.setItem("Discount_Listing",0);
-            alert("Thank you for placing an order, we hope to see you again soon!")
-            window.location.href = "homepage.html";
+            window.location.href = "lottie.html"
           
         });
     })
