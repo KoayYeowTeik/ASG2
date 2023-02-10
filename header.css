@@ -145,25 +145,16 @@ img.headerbackground{
     background-color: #B49A9A;
     border-radius: 10px;
 }
-.Paynow{
+.footerimg{
     height: 30px;
     width: 50px;
+    display: inline-block;
 }
-.Paypal{
-    height: 30px;
-    width: 80px;
-    
+.Warning{
+    text-align: center;
+    font-weight: bold;
+    font-size: 10px;
 }
-.VIsa{
-    height: 40px;
-    width: 40px;
-}
-.Mastercard{
-    height: 30px;
-    width: 50px;
-    
-}
-
 @media (max-width:600px) {
     .toggle-button{
         display: flex;

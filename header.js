@@ -88,21 +88,23 @@ var footer2 = footer.appendChild(document.createElement("div"));
 footer2.className = "footer2";
 var img = footer2.appendChild(document.createElement("img"));
 img.src = "Images/Paynow.png";
-img.className = "Paynow";
+img.className = "footerimg";
 var img = footer2.appendChild(document.createElement("img"));
 img.src = "Images/Paypal.png";
-img.className = "Paypal";
+img.className = "footerimg";
 var img = footer2.appendChild(document.createElement("img"));
 img.src = "Images/Visa.png";
-img.className = "VIsa";
+img.className = "footerimg";
 var img = footer2.appendChild(document.createElement("img"));
 img.src = "Images/Mastercard.png";
-img.className = "Mastercard";
+img.className = "footerimg";
 var p = footer2.appendChild(document.createElement("p"));
 p.appendChild(document.createTextNode("Warning! Choking Hazard! Some parts may be too small and not suitable for children under age 4!"));
+p.className = "Warning";
 
 var p = footer.appendChild(document.createElement("p"));
 p.appendChild(document.createTextNode("This website is not legitamate, it is for a school project that uses LEGO as a marketing idea"));
+p.className = "Warning";
 
 
 
