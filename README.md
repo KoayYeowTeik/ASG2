@@ -1,3 +1,4 @@
+https://github.com/KoayYeowTeik/ASG2
 # ASG2
 make a short game (progression = add on discount amount to coupon)
 everyday claim some coin for spin (get discount on certain item)
