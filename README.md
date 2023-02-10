@@ -100,6 +100,11 @@ Update 6.0
 Account html and js creation - added simple buttons to what an account page typically has
 6.1:
 Starting to implement the game page where account page divs will all disappear except the header and the game div will load
+6.2:
+Game completed with the css and the js left validation
+will do the validation for one game per day if got time
+will try to fix a sound problem in the game where sound cannot overlap
+
 
 
 

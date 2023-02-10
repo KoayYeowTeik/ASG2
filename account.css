@@ -1,3 +1,6 @@
+:root{
+    --width:400px;
+}
 .gamebox{
     height:500px;
     width:500px;
@@ -33,8 +36,14 @@
 }
 @keyframes slide{
     0%{left:0px}
-    50%{left:400px}
+    50%{left:var(--width)}
     100%{left:0px}
+}
+#music{
+    display:none;
+}
+#gamelose{
+    display:none;
 }
 
 

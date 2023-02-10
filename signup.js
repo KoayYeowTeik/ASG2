@@ -56,7 +56,7 @@ $("button.next").click(function (e) {
                             if ($("input#TOC").is(":checked")){
                                 $("p.warningcheckbox").hide();
         
-                                var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val(),"Likes_listing":{} ,"Buy_listing":{},"Discount_Listing":{}};
+                                var jsondata = {"username":$("input#username").val(),"password":$("input#password").val(),"email":$("input#email").val(),"DOB":$("input#DOB").val(),"Likes_listing":{} ,"Buy_listing":{},"Discount_Listing":0};
                                 var settings = {
                                 "async": true,
                                 "crossDomain": true,
