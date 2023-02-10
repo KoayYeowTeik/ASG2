@@ -72,7 +72,7 @@ function addcart(){ //check for color for parts
                 localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
             }
         }
-        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":JSON.parse(localStorage.getItem("Likes")),"Buy_listing":cart_details,"Discount_Listing":JSON.parse(localStorage.getItem("Discount_Listing"))};
+        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":JSON.parse(localStorage.getItem("Likes")),"Buy_listing":cart_details,"Discount_Listing":localStorage.getItem("Discount_Listing")};
         var settings = {
         "async": true,
         "crossDomain": true,

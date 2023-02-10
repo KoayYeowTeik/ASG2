@@ -11,18 +11,21 @@
     <link rel="stylesheet" href="account.css">
 </head>
 <body>
+    <audio controls id="music">
+        <source src="SoundFiles/legobreak.mp3" type="audio/mpeg">
+    </audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script></body>
     <script src="header.js" defer></script>
     <div class="accountpage">
         <div class="options">
             <button class="myacc">My Account</button>
-            <button class="coupons">My Coupons</button>
             <button class="mygame">Daily Discount Game</button>
             <button class="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</button>
         </div>
     </div>
     <div class="game">
         <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <p>Score: <span class = "score">0</span></p>
         <div class="gamebox"></div>
         <button onclick = "StopSliding(1)" class="stop">Stop!</button>
     </div>

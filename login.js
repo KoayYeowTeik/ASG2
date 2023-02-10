@@ -42,9 +42,9 @@ $("button.login").click(function (e) {
                         localStorage.setItem("isLoggedIn",true);
                         localStorage.setItem("Likes",JSON.stringify(response[i].Likes_listing));
                         localStorage.setItem("Buy_listing",JSON.stringify(response[i].Buy_listing));
-                        localStorage.setItem("Discount_Listing",JSON.stringify(response[i].Discount_Listing));
-                        localStorage.setItem("DOB",(response[i].DOB).slice(0,10));
+                        localStorage.setItem("Discount_Listing",response[i].Discount_Listing);
                         localStorage.setItem("_id",response[i]._id);
+                        localStorage.setItem("daily_game",false);
                         window.location.href = "homepage.html";
                         break;
                     }

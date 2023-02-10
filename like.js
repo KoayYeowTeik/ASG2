@@ -41,7 +41,7 @@ $("i.fa").click(function(e){
                 delete Likes[key]; 
             }
             localStorage.setItem("Likes",JSON.stringify(Likes));
-            var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":JSON.parse(localStorage.getItem("Discount_Listing"))};
+            var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":localStorage.getItem("Discount_Listing")};
             var settings = {
             "async": true,
             "crossDomain": true,
