@@ -32,3 +32,9 @@ img{
     height: 100px;
     width: 100px;
 }
+@media (max-width:600px) {
+    .listings{
+        height:auto;
+        width: 300px;
+    }
+}
