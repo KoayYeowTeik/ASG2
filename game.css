@@ -1,0 +1,50 @@
+:root{
+    --width:400px;
+}
+.gamebox{
+    height:500px;
+    width:500px;
+    border: 1px solid black;
+    margin:auto;
+    background-color: white;
+}
+.stop{
+    background-color: green;
+    font-size: 2rem;
+    border:3px solid black;
+    margin:auto;
+    position:relative;
+    left:47.5%;
+}
+.stop:hover{
+    background-color: orange;
+}
+.stop:active{
+    background-color: red;
+}
+.slider{
+    display:block;
+    height:20px;
+    width:100px;
+    position:relative;
+    visibility: hidden;
+}
+#slider1{
+    visibility: visible;
+}
+.animate{
+    animation: slide 4s infinite linear;
+}
+@keyframes slide{
+    0%{left:0px}
+    50%{left:var(--width)}
+    100%{left:0px}
+}
+#music{
+    display:none;
+}
+#gamelose{
+    display:none;
+}
+
+
