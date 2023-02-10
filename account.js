@@ -83,7 +83,7 @@ function StopSliding(slider){
         $("div.footer").show();
         $("div.game").hide();
         localStorage.setItem("Discount_Listing",slider+parseInt(localStorage.getItem("Discount_Listing"))-1);
-        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":localStorage.getItem("Likes"),"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":parseInt(localStorage.getItem("Discount_Listing"))};
+        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"Discount_Listing":parseInt(localStorage.getItem("Discount_Listing"))};
         var settings = {
           "async": true,
           "crossDomain": true,
