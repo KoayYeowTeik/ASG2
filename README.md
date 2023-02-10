@@ -1,3 +1,4 @@
+https://github.com/KoayYeowTeik/ASG2
 # ASG2
 make a short game (progression = add on discount amount to coupon)
 everyday claim some coin for spin (get discount on certain item)
@@ -21,7 +22,7 @@ USER STOP AT EXACTLY 1 MIN FOR A PRIZE
 GAME 2 IDEA - Kenan
 Fruit Ninja(Lego Brick Version)
 Cut as many Bricks as possible to earn prizes
-
+# For testing the website use email account: koayyt05@gmail.com and password:password123 to log in.
 
 # Facz Bricks Website run-through
 ## Website Features
