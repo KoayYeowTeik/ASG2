@@ -109,4 +109,3 @@ function StopSliding(slider){
     $(aboveSlider).css("visibility","visible");
     button.setAttribute("onclick","StopSliding("+(slider+1)+")");
     }
-
