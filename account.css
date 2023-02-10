@@ -35,3 +35,53 @@ body{
     text-align: center;
     justify-content: space-between;
 }
+@media(max-width:1090px){
+    .logout{
+        flex: 0 0 70%;
+        max-width: 70%;
+        position: relative;
+        padding:8px;
+        margin-left: 100px;
+    }
+    .mygame{
+        flex: 0 0 70%;
+        max-width: 70%;
+        position: relative;
+        padding:8px;
+        margin-left: 325px;
+        margin-top: 50px;
+        
+    }
+}
+
+@media(max-width:767px){
+    .logout{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+        margin-left: 80px;
+    }
+    .mygame{
+        flex: 0 0 50%;
+        max-width:30%;
+        position: relative;
+        padding:8px;
+    }
+}
+@media(max-width:500px){
+    .logout{
+        flex: 0 0 30%;
+        max-width: 30%;
+        position: relative;
+        padding:8px;
+        margin-left: 80px;
+    }
+    .mygame{
+        flex: 0 0 10%;
+        max-width: 30%;
+        position: relative;
+        padding:8px;
+    }
+    
+}
