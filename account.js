@@ -83,23 +83,24 @@ function StopSliding(slider){
         $("div.footer").show();
         $("div.game").hide();
         localStorage.setItem("Discount_Listing",slider+parseInt(localStorage.getItem("Discount_Listing"))-1);
-        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":localStorage.getItem("Likes"),"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":localStorage.getItem("Discount_Listing")};
-                var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": `https://faczbricksdata-e1b3.restdb.io/rest/userdata/${localStorage.getItem("_id")}`,
-                "method": "PUT",
-                "headers": {
-                    "content-type": "application/json",
-                    "x-apikey": "63dbc5043bc6b255ed0c458e",
-                    "cache-control": "no-cache"
-                },
-                "processData": false,
-                "data": JSON.stringify(jsondata)
-                }
-                $.ajax(settings).done(function (response) {
-                    location.reload();
-                });
+        var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":localStorage.getItem("Likes"),"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":parseInt(localStorage.getItem("Discount_Listing"))};
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": `https://faczbricksdata-e1b3.restdb.io/rest/userdata/${localStorage.getItem("_id")}`,
+          "method": "PUT",
+          "headers": {
+            "content-type": "application/json",
+            "x-apikey": "63dbc5043bc6b255ed0c458e",
+            "cache-control": "no-cache"
+          },
+          "processData": false,
+          "data": JSON.stringify(jsondata)
+        }
+        
+        $.ajax(settings).done(function (response) {
+          location.reload();
+        });
         };
 
     
