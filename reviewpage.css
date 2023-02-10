@@ -2,7 +2,7 @@
     color:orange;
 }
 body{
-    background: url("https://t4.ftcdn.net/jpg/02/90/45/59/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
+    background: url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
 }
 .reviewdata{
     position: relative;
@@ -44,7 +44,7 @@ button{
     width: 600px;
     background: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    background-image: url("https://i.pinimg.com/originals/00/73/c1/0073c10fba125eb99f5f4475f3f1c828.jpg");
+    background-image: url("Images/0073c10fba125eb99f5f4475f3f1c828.jpg");
     background-size: cover;
     border-radius: 20px;
 }
