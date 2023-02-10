@@ -12,7 +12,6 @@ var settings = {
   $.ajax(settings).done(function (response) {
     like = JSON.parse(localStorage.getItem("Likes"));
     if (like != null){
-    console.log("loggedin")
     res = response;
     for (var i = 0;i<5;i++){
     var listing = response[Math.floor(Math.random() * response.length)]
@@ -54,14 +53,15 @@ var settings = {
    
     $("div.listing-container").css("background-color", "white");
     }
-    $("div.foryou").on("click", "a", function() {
+    $("div.foryou-listing-container").on("click","a",function(){
         for (let i = 0;i<res.length;i++){
             if (res[i].listing_name == this.children[0].children[0].innerText){
                 sessionStorage.setItem("listing_data",JSON.stringify(res[i]));
                 window.location.href = "listing.html";
             }
         }
-    });
+    })
+
     $("div.listing-container").on("click","i",function (e) {
         e.preventDefault();
         if (localStorage.getItem("isLoggedIn") == "true"){

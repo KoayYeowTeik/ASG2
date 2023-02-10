@@ -94,9 +94,6 @@ img{
      text-decoration: none; 
      color:black;
 }
-.a{
-    text-transform: uppercase;
-}
 .a:visited{
     text-decoration: none!important; 
     color:black;
