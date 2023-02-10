@@ -149,6 +149,12 @@ Styled the homepage search bar and background and most of the stuff but after st
 Update 8.1
 Decided to add to the css and javascript and add html to the homepage to make a loading animation for the page
 
+Update 8.2:
+did up loding with lottie but idk where to put so leave it for now
+
+Update 9.0
+Did cart styling with mobile view this is one of the last pushes and touched up listing style
+
 
 
 
