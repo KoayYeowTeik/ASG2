@@ -51,7 +51,7 @@ var settings = {
     </div>'))
     }
    
-    $("div.listing-container").css("background-color", "white");
+    $("div.listing-container").css("background-color", "gold");
     }
     $("div.foryou-listing-container").on("click","a",function(){
         for (let i = 0;i<res.length;i++){
@@ -84,7 +84,7 @@ var settings = {
                     delete Likes[key]; 
                 }
                 localStorage.setItem("Likes",JSON.stringify(Likes));
-                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":localStorage.getItem("Discount_Listing")};
+                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"Likes_listing":Likes};
                 var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -94,7 +94,7 @@ var settings = {
                     "content-type": "application/json",
                     "x-apikey": "63dbc5043bc6b255ed0c458e",
                     "cache-control": "no-cache"
-                },
+                },  
                 "processData": false,
                 "data": JSON.stringify(jsondata)
                 }
@@ -109,7 +109,6 @@ var settings = {
     });
 }
 else{
-    console.log("not logged in")
     for (var i = 0;i<5;i++){
         var listing = response[Math.floor(Math.random() * response.length)];
         $("div.foryou-listing-container").append($('\
@@ -155,7 +154,7 @@ else{
                     delete Likes[key]; 
                 }
                 localStorage.setItem("Likes",JSON.stringify(Likes));
-                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":localStorage.getItem("Buy_listing"),"Discount_Listing":localStorage.getItem("Discount_Listing")};
+                var jsondata = {"username":localStorage.getItem("username"),"password":localStorage.getItem("password"),"email":localStorage.getItem("email"),"DOB":localStorage.getItem("DOB"),"Likes_listing":Likes,"Buy_listing":JSON.parse(localStorage.getItem("Buy_listing")),"Discount_Listing":(localStorage.getItem("Discount_Listing"))};
                 var settings = {
                 "async": true,
                 "crossDomain": true,
