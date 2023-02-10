@@ -27,7 +27,7 @@ var settings = {
     if (like[key2] == undefined){   
         $("div.foryou-listing-container").append($('\
     <div class="listing-container">\
-                <a href="#">\
+                <a href="#" class = "a">\
                     <div class="listing-details">\
                         <p class="listing-name">'+listing.listing_name+'</p>\
                         <p class="listing-price">$'+listing.listing_price+'</p>\
@@ -41,7 +41,7 @@ var settings = {
     else{
         $("div.foryou-listing-container").append($('\
     <div class="listing-container">\
-                <a href="#">\
+                <a href="#" class = "a">\
                     <div class="listing-details">\
                         <p class="listing-name">'+listing.listing_name+'</p>\
                         <p class="listing-price">$'+listing.listing_price+'</p>\
@@ -52,7 +52,7 @@ var settings = {
     </div>'))
     }
    
-    $("div.listing-container").css("background-color", "yellow");
+    $("div.listing-container").css("background-color", "white");
     }
     $("div.foryou").on("click", "a", function() {
         for (let i = 0;i<res.length;i++){
@@ -114,7 +114,7 @@ else{
         var listing = response[Math.floor(Math.random() * response.length)];
         $("div.foryou-listing-container").append($('\
         <div class="listing-container">\
-                    <a href="#">\
+                    <a href="#" class="a">\
                         <div class="listing-details">\
                             <p class="listing-name">'+listing.listing_name+'</p>\
                             <p class="listing-price">$'+listing.listing_price+'</p>\

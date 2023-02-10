@@ -22,7 +22,6 @@ body{
     backdrop-filter: blur(4px) saturate(180%);
     margin-top: 100px;
     margin-left: 280px;
-    text-align: center;
 }
 .search-bar input{
     background: transparent;
@@ -68,12 +67,51 @@ body{
     justify-content: space-between;
     margin: 10px;
 }
+.listing-container:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
 img{
     width: 100px;
     height:100px;
 }
 .searchresult{
     text-align: center;
+}
+.searchresult>a:visited{
+    text-decoration: none!important; 
+    color:black;
+}
+.searchresult>a:link {
+    text-decoration: none; 
+    color:black;
+}
+.searchresult>a:hover {
+    text-decoration: none; 
+    color:black;
+}
+.searchresult>a:active {
+     text-decoration: none; 
+     color:black;
+}
+.a{
+    text-transform: uppercase;
+}
+.a:visited{
+    text-decoration: none!important; 
+    color:black;
+}
+.a:link {
+    text-decoration: none; 
+    color:black;
+}
+.a:hover {
+    text-decoration: none; 
+    color:black;
+}
+.a:active {
+     text-decoration: none; 
+     color:black;
 }
 @media(max-width:967px){
     .foryou-listing-container{
@@ -95,6 +133,7 @@ img{
         margin-left: 0px;
     }
 }
+
 @media(max-width:767px){
     .foryou-listing-container{
         flex: 0 0 50%;
@@ -130,4 +169,7 @@ img{
         max-width: 100%;
         margin-left: 0px;
     }
+}
+.fa-heart{
+    color: red;
 }
