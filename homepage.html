@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="loading.css">
 </head> 
 <body>
     <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script></body>
     <script src="header.js" defer></script>
     <script src="search.js" defer></script>
     <script src="homepage.js" defer></script>
-    <div class="announcement">
+    <div class="preload">
+        <img class="cloud" src="Images/loadingi.webp" alt="Cloud">
+        <img class="brick1" src="Images/png-transparent-room-copenhagen-lego-storage-brick-8-toy-block-lunchbox-toy-blue-angle-white-thumbnail.png" alt="brick1">
+        <img class="brick2" src="Images/png-transparent-room-copenhagen-lego-storage-brick-8-toy-block-lunchbox-toy-blue-angle-white-thumbnail.png" alt="brick2">
+        <img class="brick3" src="Images/png-transparent-room-copenhagen-lego-storage-brick-8-toy-block-lunchbox-toy-blue-angle-white-thumbnail.png" alt="brick3">
+    </div>
 
     <div class = "container2"></div>
 
-        <input type="text" placeholder = "Search in the entire store" id = "search" class="search-bar"onkeyup = "Search()">
-        <ul class="searchresult"></ul>
+    <input type="text" placeholder = "Search in the entire store" id = "search" class="search-bar"onkeyup = "Search()">
+    <ul class="searchresult"></ul>
     <div class="category">
         
     </div>
@@ -37,5 +43,6 @@
 
         <div class="footer"></div>
     </div>
+    <script src="loading.js"></script>
 </body>
 </html>
