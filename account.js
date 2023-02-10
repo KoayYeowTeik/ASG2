@@ -1,5 +1,11 @@
 $(document).ready(function () {
     $("div.game").hide();
+    document.getElementById("POINTS").innerText = localStorage.getItem("Discount_Listing");
+    $("div.accountinfo").append("\
+        <p>Your Email: "+localStorage.getItem("email")+"</p>\
+        <p>Your Username: "+localStorage.getItem("username")+"</p>\
+        <p>Your Password: "+localStorage.getItem("password")+"</p>\
+    ")
 });
 if (localStorage.getItem("isLoggedIn") != "true"){
     window.location.href = "Login.html";
