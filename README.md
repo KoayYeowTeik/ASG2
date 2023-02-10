@@ -61,13 +61,13 @@ The game is a simple concept of stacking the blocks by pressing the stop button 
 3. The likes page makes it convenient for you to find and add items to your cart if u want to revisit them or buy them for later.
 
 ### Cart
-The cart is where you have added your listings and want to checkout to buy your items.
-The items can add quantity at the cart page and the prices will be totalled and calculated for you at the end.
+1. The cart is where you have added your listings and want to checkout to buy your items.
+2. The items can add quantity at the cart page and the prices will be totalled and calculated for you at the end.
 This is where the points you earn from the game come into play.
-1 point is 1 cent so it will deduct from your total and you will get a discount depending on your points.
-Once points are used and you have checked out eveerything will diappear and you points will be set back to 0.
-You will be directed back to the homepage after checking out.
-The update cart button updates whatever you have altered in your cart
+3. 1 point is 1 cent so it will deduct from your total and you will get a discount depending on your points.
+4. Once points are used and you have checked out eveerything will diappear and you points will be set back to 0.
+5. You will be directed back to the homepage after checking out.
+6. The update cart button updates whatever you have altered in your cart
 ### Review 
 1. The review page shows the reviews left by different users which you can read to see what people think of our website.
 2. You can also submit your review by clicking the "here" button and it will direct you to the submit form which you can fill it up and give us a score.
