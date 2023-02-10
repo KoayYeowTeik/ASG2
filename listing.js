@@ -57,7 +57,7 @@ function addcart(){ //check for color for parts
                 localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
             }
             else{
-                cart_details[listing_details.listing_id] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText};
+                cart_details[listing_details.listing_id] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText,_id:listing_details._id};
                 localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
             }
         }
@@ -68,7 +68,7 @@ function addcart(){ //check for color for parts
                 localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
             }
             else{
-                cart_details[key] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText};
+                cart_details[key] = {listing_id:listing_details.listing_id,listing_color:listing_details.listing_color,buy_quantity:document.querySelector("nobr.quantity_value").innerText,_id:listing_details._id};
                 localStorage.setItem("Buy_listing",JSON.stringify(cart_details));
             }
         }
