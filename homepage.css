@@ -1,6 +1,6 @@
 
 body{
-    background: url("https://t4.ftcdn.net/jpg/02/90/45/59/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
+    background: url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
 }
 .container2{
     height: 220%;
@@ -69,7 +69,7 @@ body{
 }
 .listing-container:hover{
     transform: scale(1.1);
-    transition: .5s;
+    transition: .2s;
 }
 img{
     width: 100px;

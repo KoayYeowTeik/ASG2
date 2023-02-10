@@ -5,10 +5,9 @@
 .container2{
     height: 100%;
     width: 100%;
-    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpapers.com/images/hd/hd-lego-bricks-background-qsznux1skhp0v1m7.jpg);
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
     background-position: center;
     background-size: cover;
-    position: absolute;
     background-attachment: fixed;
     overflow: hidden;
 }
@@ -19,12 +18,16 @@
     color: antiquewhite;
 }
 .topbar{
-    width:360px;
+    width: 360px;
     height:480px;
     position:relative;
     margin: 6% auto;
-    background: #fff;
+    background: url("Images/High_resolution_wallpaper_background_ID_77701781640.jpg");
+    background-size: cover;
+    background-position: right;
     padding: 5px;
+    padding-left: 5px;
+    border-radius: 10px;
 }
 .buttonbox{
     width: 220px;
@@ -34,6 +37,7 @@
     border-radius: 30px;
 
 }
+
 .btn{
     padding: 10px 30px;
     cursor: pointer;
@@ -41,6 +45,23 @@
     border: 0;
     outline: none;
     position: relative;
+    color: white;
+}
+.btn2:visited{
+    text-decoration: none!important; 
+    color:black;
+}
+.btn2:link {
+    text-decoration: none; 
+    color:black;
+}
+.btn2:hover {
+    text-decoration: none; 
+    color:black;
+}
+.btn2:active {
+     text-decoration: none; 
+     color:black;
 }
 #colorbtn{
     top: 0;
@@ -57,6 +78,7 @@
     position: absolute;
     width: 280px;
     transition: .5s;
+    color: white;
 }
 .inputfield{
     width: 100%;
@@ -68,6 +90,7 @@
     border-bottom: 1px solid lightgray;
     outline: none;
     background: transparent;
+    color: white;
 }
 .submitbtn{
     width:85%;
@@ -84,6 +107,7 @@
 }
 .maily{
     margin-left: 10px;
+    color: white;
 }
 .btn2{
     padding: 10px 30px;
@@ -93,4 +117,5 @@
     outline: none;
     position: relative;
     margin-left: 40px;
+    color: white;
 }
