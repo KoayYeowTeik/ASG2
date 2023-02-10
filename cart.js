@@ -33,7 +33,7 @@ var settings = {
                     <i class="fa fa-trash" aria-hidden="true"></i>\
                 </div>\
                 '))
-                $("div.cart").css("background-color","yellow");
+                $("div.cart").css("background-color","gold");
                 $("a.gotolisting").css("text-decoration","none");
                 
             }
