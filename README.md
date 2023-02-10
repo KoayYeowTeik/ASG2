@@ -60,8 +60,6 @@ Patch 2.3
 Validated the inputted data into the RestDB database where no account can have the same information for Login purposes
 Patch 2.4
 Completion of the Signup.html and js scripts where if the sign up is successful, the user will proceed to the login page for confirmation, waiting for partner to do the CSS
-Patch 2.5
-Kenan, enter what u did for the CSS here
 
 Update 3.0 (Login page)
 Login page: Created the html for the login page with simple input text and some href links for future use
@@ -82,13 +80,6 @@ Patch 4.3
 Added POST to the DB code to upload to the DB (validation only includes not posting blank info)
 Patch 4.4(CSS waiting for parnter)
 
-Kenan
-Patch 4.5 Updated CSS and HTML for login page but the button is bugged
-Patch 4.6 Finalised CSS and HTML for the login page and fixed the button issue login works fine now
-
-
-
-
 Update 5.0
 Creation of the listing.html page where every listing data is displayed from the data from session storage which is set from the listing clicked from search bar or the listing results
 did the simple html
@@ -104,6 +95,63 @@ Starting to implement the game page where account page divs will all disappear e
 Game completed with the css and the js left validation
 will do the validation for one game per day if got time
 will try to fix a sound problem in the game where sound cannot overlap
+
+
+
+Kenan
+Update 1.0:
+Did styling for the header.js used navbar but not fully produced yet. What i have has alot of bugs still.
+Update 1.1:
+Touched up the styling for the navbar in header.css have not done mobile view yet and tried doing a dropdown bar but might change or swap out the idea later.
+Update 1.2:
+Did abit more to the NavBar for styling and added classes and other divs and containers into the html so that the styling works better.
+
+Update 2.0:
+Did the styling for Log In page Looks ok for now but will definitely add more to it and change up the coloring and background later in.
+Update 2.1:
+Done up styling for the Sign Up page also this one giving alot more problems with the whole background becoming excess or overflowing will have to debug later on.
+Update 2.2:
+Touched up both the log in page and sign up page cause i realised the css inteferred with the javascript causing some errors making the whole program not able to log in so i fixed that in this patch.
+
+Update 3.0
+Did some styling to the footer below in every page not sure the format i want yet so just some minor adjustments to make the pictures look symmetrical and also give some order to the lines and reviews.
+
+Update 4.0
+Did the styling for the reviews page not sure about the background first and have yet to style the review form.
+
+Update 4.1:
+Styled the review form will add background soon but just making sure the format and the whole bone structure looks ok first.
+
+Update 4.2:
+Added the color and background to the reviews page made the height of the box automatic so it can change as more reviews are being added.
+
+Update 5.0:
+Started styling the listings made a box but it looks quite ugly will try to change it and make it look slightly better although its not coming out how i want it to especially with the mobile view problem.
+
+Update 5.1:
+Continued styling the listings the border box animation works might change it abit more in the future not sure yet.
+
+Update 6.0:
+Started styling the likes page followed the review method to make the height automatic and the like are centered to make it look neater.
+
+Update 6.1
+Tweaked some designs for the likes page as well as added color and background
+
+Update 7.0:
+Done up a community page created the html bone structure 
+
+Update 7.1
+Done up the styling for the community page as well as the javascript works well decided to remove video as filtering the videos dont really work and cause alot of problems so sticking to pictures only
+
+Update 8.0
+Styled the homepage search bar and background and most of the stuff but after styling the search is causing problem so yet to fix that.
+
+Update 8.1
+Decided to add to the css and javascript and add html to the homepage to make a loading animation for the page
+
+
+
+
 
 
 
