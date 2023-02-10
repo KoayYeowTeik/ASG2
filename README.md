@@ -23,6 +23,60 @@ Fruit Ninja(Lego Brick Version)
 Cut as many Bricks as possible to earn prizes
 
 
+# Facz Bricks Website run-through
+## Website Features
+### Header
+1. Our header consits of our navigation bar as well as the footer containing the reviews link and the payment methods and warnings.
+2. The header is constant throughout the website and will always be seen throughout all the different pages.
+3. The navigation bar will direct you to the different pages of our website and clicking on the icon will direct you to the homepage of our website.
+4. Clicking on the review link will direct you to the reviews page.
+
+### Home Page
+1. Go to Homepage and you will see a search bar, product pop-ups.
+2. The search bar allows you to find the products our website has listed, redirecting you to the listing item.
+3. The product pop-ups are random and will change when the page is refreshed. Clicking on it will bring you to the product and clicking on the heart will make you like the listed item.
+### Log In
+1. The logging page is a very simple concept where you enter email and password to log in to your account
+2. There is validation done for the logging in where email will be invalid unless a valid email is inputted, same goes for the password
+3. After logging in you will be redirected to the homepage and you will be able to access the full website.
+4. Without logging into the website you will not be able to access the full website and you will always be redirected to the login page.
+### Sign Up
+1. The Loging page has a register link where if clicked leads you to the signup page
+2. In the signup page you will enter your email, username and password and date of birth, also agreeing to the terms and conditions before being able to be registered.
+3. Once registered you will be directed to log in to your account which you can then access the website once again.
+4. We also added options to log in with facebook instagram and twitter but for now the links do not work.
+### Account
+1. The account page has a simple layout displaying your account details, has the option to log out also as well as a daily game you can play to earn yourself points to get a discount on the listed items.
+2. The log out button once clicked logs you out of your account and brings you back to the homepage where you once again need to log in.
+
+### Game
+The game is a simple concept of stacking the blocks by pressing the stop button and you will try to stack the blocks as high as possible. One "Stack" is worth 1 point which will be added to your account when the game ends. The game ends when you miss stacking the block and you can only play again the next day. The game has added sound when you stack a block.
+### Community
+1. The Community page is a more fun concept to allow our website visitors to really enjoy the lego culture and to also let newcomers understand the fun of lego through different pictures and the inclusion of lego memes.
+2. The Community page can be filtered by the different categories and also the all category. 
+   
+### Likes
+1. The likes page shows the listings that you have liked when you clicked the heart on the listings.
+2. By unclicking the heart the listings will disappear from the likes page if you refresh the page. 
+3. The likes page makes it convenient for you to find and add items to your cart if u want to revisit them or buy them for later.
+
+### Cart
+The cart is where you have added your listings and want to checkout to buy your items.
+The items can add quantity at the cart page and the prices will be totalled and calculated for you at the end.
+This is where the points you earn from the game come into play.
+1 point is 1 cent so it will deduct from your total and you will get a discount depending on your points.
+Once points are used and you have checked out eveerything will diappear and you points will be set back to 0.
+You will be directed back to the homepage after checking out.
+The update cart button updates whatever you have altered in your cart
+### Review 
+1. The review page shows the reviews left by different users which you can read to see what people think of our website.
+2. You can also submit your review by clicking the "here" button and it will direct you to the submit form which you can fill it up and give us a score.
+   
+### Lottie
+We used lottie for our loading animation before going into our website.
+
+### Loading
+We also added and extra loading function when entering the homepage
 
 
 
@@ -148,6 +202,12 @@ Styled the homepage search bar and background and most of the stuff but after st
 
 Update 8.1
 Decided to add to the css and javascript and add html to the homepage to make a loading animation for the page
+
+Update 8.2:
+did up loding with lottie but idk where to put so leave it for now
+
+Update 9.0
+Did cart styling with mobile view this is one of the last pushes and touched up listing style
 
 
 
