@@ -1,0 +1,113 @@
+body{
+    background: url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
+}
+.checkout{
+    margin-bottom: 28px;
+    width: 120px;
+    height: 30px;
+    background:green;
+    border: none;
+    border-radius: 2px;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.checkout:hover,
+.checkout:focus{
+    background:#f44336;
+    transition: 0.2s ease;
+}
+.updatecart{
+    width: 110px;
+    height: 10%;
+    background: linear-gradient(to right, red, orange);
+    border-radius: 30px;
+    transition: .5s;
+    cursor: pointer;
+}
+/*
+.cart{
+    position: relative;
+    margin: 5% auto;
+    height: auto;
+    width: 600px;
+    background: url("Images/360_F_252578113_P2YtgIWCH8nC04orBwZNcne8FYTp2XSH.jpg");
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    background-size: cover;
+    padding: 10px;
+    border-radius: 20px;
+}*/
+.listing>img{
+    height: 100px;
+    width:120px;
+}
+.cart {
+    padding: .1em 0 ;
+}
+   
+.total{
+    display: block;
+    width: 100%;
+    padding: 1.5em;
+    border-bottom: 1px solid #fafafa;
+}
+.listing{
+    display: block;
+    width: 100%;
+    padding: 1.5em;
+    border: 20px solid #fafafa;
+    border-radius: 5px;
+}
+.listing-name{
+    text-align: right;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 300px;
+}
+.listing-ppu{
+    text-align: right;
+    font-weight: bold;
+    display: inline-block;
+    margin-left: 300px;
+}
+.listing-quantity{
+    text-align: right;
+}
+.listing-total{
+    text-align: right;
+    font-weight: bold;
+}
+@media (max-width:600px) {
+    .listing-name{
+        text-align: right;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 00px;
+    }
+    .listing-ppu{
+        text-align: right;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 00px;
+    }
+
+}
+@media (max-width:1000px) {
+    .listing-name{
+        text-align: right;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 00px;
+    }
+    .listing-ppu{
+        text-align: right;
+        font-weight: bold;
+        display: inline-block;
+        margin-left: 00px;
+    }
+
+}

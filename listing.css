@@ -1,4 +1,4 @@
-.container2{
+/*.container2{
     height: 220%;
     width: 100%;
     background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(https://wallpapers.com/images/hd/hd-lego-bricks-background-qsznux1skhp0v1m7.jpg);
@@ -97,4 +97,148 @@ button{
     border-bottom-left-radius: 20px;
     background: orange;
     display: inline-block;
+}
+@media(max-width:1200px){
+    .content{
+        flex: 0 0 70%;
+        max-width: 70%;
+        position: relative;
+        padding:8px;
+        margin-left: 100px;
+    }
+    .button{
+        flex: 0 0 30%;
+        max-width: 30%;
+        position: relative;
+        padding:8px;
+    }
+}
+
+@media(max-width:667px){
+    .content{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+        margin-left: 10px;
+    }
+    .button{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+    }
+}
+@media(max-width:600px){
+    .content{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+    .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}*/
+body{
+ background: url("Images/360_F_290455929_9lEPUEIlw0FZX7cAnxLjRvhfFyjIKS4J.jpg");
+}
+.for-you{
+    text-align: center;
+}
+.nimby{
+    flex: 0 0 30%;
+    max-width: 100%;
+    position: relative;
+    padding: 18px;
+    text-align: center;
+    margin-left: 50px;
+}
+.listingdetails{
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: gold;
+}
+.listingdetails:hover{
+    transform: scale(1.1);
+    transition: .2s;
+}
+.nimby-img{
+    width: 200px;
+    height:200px;
+}
+.a:visited{
+    text-decoration: none!important; 
+    color:black;
+}
+.a:link {
+    text-decoration: none; 
+    color:black;
+}
+.a:hover {
+    text-decoration: none; 
+    color:black;
+}
+.a:active {
+     text-decoration: none; 
+     color:black;
+}
+button{
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: orange;
+    display: inline-block;
+}
+@media(max-width:967px){
+    .content{
+        flex: 0 0 70%;
+        max-width: 70%;
+        position: relative;
+        padding:8px;
+        margin-left: 100px;
+    }
+    .button{
+        flex: 0 0 30%;
+        max-width: 30%;
+        position: relative;
+        padding:8px;
+    }
+}
+
+@media(max-width:767px){
+    .content{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+        margin-left: 170px;
+    }
+    .button{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding:8px;
+    }
+}
+@media(max-width:500px){
+    .content{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-left: 0px;
+    }
+    .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
