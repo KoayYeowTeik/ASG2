@@ -13,7 +13,7 @@ var settings = {
     like = JSON.parse(localStorage.getItem("Likes"));
     if (like != null){
     res = response;
-    for (var i = 0;i<5;i++){
+    for (var i = 0;i<10;i++){
     var listing = response[Math.floor(Math.random() * response.length)]
 
     var key2;
